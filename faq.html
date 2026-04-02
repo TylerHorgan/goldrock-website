@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="description" content="GoldRock FAQ — Everything you need to know about selling your Colorado home for cash. No BS answers to real questions about our process, offers, contracts, and service areas.">
+<title>GoldRock | FAQ — Colorado Cash Home Buyers</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #D4A832;
+    --gold-light: #E8C040;
+    --gold-dark: #A07830;
+    --near-black: #0A0A0A;
+    --bg: #F5F2EE;
+    --bg-light: #fafaf8;
+    --white: #ffffff;
+    --text: #1a1a1a;
+    --text-muted: #6b6b6b;
+    --border: #e5e0d8;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 0 48px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo { font-size: 20px; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0; }
+  .logo .g { color: var(--gold); }
+  .logo .r { color: var(--text); }
+  .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+  .nav-links a { text-decoration: none; color: var(--text); font-size: 15px; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+  @keyframes btnNone {
+    0% {}
+    100% {}
+  }
+  .btn-gold {  }
+  .btn-gold:hover { animation: none; transform: translateY(-1px); box-shadow: 0 0 24px rgba(212,168,50,0.6); }
+  .btn-gold {
+    background: var(--gold);
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    
+  }
+  .btn-gold:hover { background: var(--gold-dark); transform: translateY(-2px) scale(1.04); }
+
+
+  }
+  .btn-gold:hover { background: var(--gold-dark); transform: translateY(-1px); }
+  #hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; flex-direction: column; gap: 5px; align-items: center; justify-content: center; }
+  #hamburger span { display: block; width: 24px; height: 2.5px; background: var(--text); border-radius: 2px; transition: all 0.3s; }
+  #mobileNav { display: none; position: fixed; top: 60px; left: 0; right: 0; background: white; border-bottom: 2px solid var(--gold); z-index: 199; padding: 20px 24px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
+  #mobileNav ul { list-style: none; display: flex; flex-direction: column; }
+  #mobileNav a { display: block; padding: 14px 0; font-size: 16px; font-weight: 600; color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border); }
+  #mobileNav a.active { color: var(--gold); }
+  #mobileNav .mob-cta { margin-top: 16px; width: 100%; padding: 14px; font-size: 15px; justify-content: center; }
+
+  /* ── HERO ── */
+  .faq-hero {
+    background: var(--near-black);
+    padding: 80px 48px 72px;
+    text-align: center;
+  }
+  .section-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 14px;
+    display: block;
+  }
+  .faq-hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 800;
+    color: white;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+    margin-bottom: 18px;
+  }
+  .faq-hero h1 span { color: var(--gold); }
+  .faq-hero p {
+    color: #aaa;
+    font-size: 17px;
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* ── CATEGORY NAV ── */
+  .cat-nav {
+    background: var(--bg);
+    padding: 28px 48px;
+    position: sticky;
+    top: 64px;
+    z-index: 100;
+    border-bottom: 1px solid var(--border);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .cat-nav-inner {
+    display: flex;
+    gap: 10px;
+    max-width: 900px;
+    margin: 0 auto;
+    white-space: nowrap;
+    
+  }
+  .btn-gold:hover { background: var(--gold-dark); transform: translateY(-2px) scale(1.04); }
+  .cat-pill {
+    padding: 9px 18px;
+    border-radius: 100px;
+    border: 1.5px solid var(--border);
+    background: white;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .cat-pill:hover, .cat-pill.active {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: white;
+  }
+
+  /* ── FAQ SECTIONS ── */
+  .faq-body {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 64px 48px 80px;
+  }
+  .faq-category {
+    margin-bottom: 64px;
+    scroll-margin-top: 140px;
+  }
+  .faq-category-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--gold);
+  }
+  .faq-category-icon { font-size: 24px; }
+  .faq-category h2 {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.3px;
+    color: var(--text);
+  }
+
+  .faq-list { display: flex; flex-direction: column; }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-question {
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 15px;
+    transition: background 0.15s;
+    gap: 16px;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .faq-question:hover { background: #fafaf8; }
+  .faq-item.open .faq-question { color: var(--gold); }
+  .faq-chevron {
+    color: var(--gold);
+    font-size: 20px;
+    transition: transform 0.25s;
+    flex-shrink: 0;
+    margin-left: 16px;
+  }
+  .faq-item.open .faq-chevron { transform: rotate(180deg); }
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s;
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.65;
+    padding: 0 24px;
+  }
+  .faq-item.open .faq-answer { max-height: 1200px; padding: 0 24px 20px; overflow-y: auto; }
+
+  /* ── STILL HAVE QUESTIONS ── */
+  .faq-cta {
+    background: var(--near-black);
+    margin: 0 48px 80px;
+    border-radius: 20px;
+    padding: 56px 48px;
+    text-align: center;
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .faq-cta h2 {
+    font-size: clamp(26px, 4vw, 40px);
+    font-weight: 800;
+    color: white;
+    letter-spacing: -0.8px;
+    margin-bottom: 14px;
+  }
+  .faq-cta p { color: #aaa; font-size: 16px; margin-bottom: 32px; line-height: 1.7; }
+  .faq-cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn-outline {
+    background: transparent;
+    color: var(--gold);
+    border: 2px solid var(--gold);
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+  }
+  .btn-outline:hover { background: var(--gold); color: white; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #0a0a0a;
+    padding: 60px 48px 0;
+    color: white;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid #222;
+  }
+  .footer-logo { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+  .footer-logo .g { color: var(--gold); }
+  .footer-tagline { color: #888; font-size: 14px; line-height: 1.6; }
+  .footer-col h4 { font-size: 14px; font-weight: 600; margin-bottom: 14px; color: white; }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 10px; }
+  .footer-col a { color: #888; font-size: 14px; text-decoration: none; transition: color 0.2s; }
+  .footer-col a:hover { color: #ddd; }
+  .footer-bottom {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #555;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .footer-bottom-links { display: flex; gap: 20px; }
+  .footer-bottom-links a { color: #555; text-decoration: none; }
+  .footer-bottom-links a:hover { color: #aaa; }
+
+  /* ── MOBILE ── */
+  @media (max-width: 768px) {
+    nav { padding: 0 20px; height: 60px; }
+    .nav-links { display: none; }
+    .btn-gold { display: none; }
+    #hamburger { display: flex; }
+
+    .faq-hero { padding: 56px 20px 48px; }
+    .faq-hero p { font-size: 15px; }
+
+    .cat-nav { padding: 16px 20px; top: 60px; }
+    .cat-nav-inner { gap: 8px; }
+    .cat-pill { padding: 8px 14px; font-size: 12px; }
+
+    .faq-body { padding: 40px 20px 60px; }
+    .faq-category { margin-bottom: 48px; scroll-margin-top: 120px; }
+    .faq-category h2 { font-size: 19px; }
+    .faq-question { font-size: 15px; padding: 18px 0; }
+    .faq-answer { font-size: 14px; }
+
+    .faq-cta { margin: 0 20px 60px; padding: 40px 24px; border-radius: 16px; }
+    .faq-cta h2 { font-size: clamp(22px, 6vw, 32px); }
+    .faq-cta p { font-size: 15px; }
+    .faq-cta-buttons { flex-direction: column; align-items: stretch; }
+    .btn-outline { justify-content: center; }
+    .btn-gold.faq-btn { width: 100%; justify-content: center; }
+
+    footer { padding: 40px 20px 0; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 28px; padding-bottom: 32px; }
+    .footer-bottom { flex-direction: column; text-align: center; gap: 8px; }
+    .footer-bottom-links { justify-content: center; }
+  }
+
+  @media (max-width: 480px) {
+    .faq-hero h1 { font-size: clamp(28px, 9vw, 40px); }
+    .footer-grid { grid-template-columns: 1fr; gap: 20px; }
+    .faq-category-header { flex-direction: row; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" style="display:flex;align-items:center;text-decoration:none;"><img src="GoldRock_Logo_Flat.jpeg" alt="GoldRock" style="height:42px;width:auto;display:block;border-radius:6px;"></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    
+    <li><a href="agents.html">Agents</a></li>
+    <li><a href="faq.html" class="active">FAQ</a></li>
+    <li><a href="about.html">About Us</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <button class="btn-gold" onclick="openOfferForm()">Get My Cash Offer</button>
+    <button id="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div id="mobileNav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    
+    <li><a href="agents.html">Agents</a></li>
+    <li><a href="faq.html" class="active">FAQ</a></li>
+    <li><a href="about.html">About Us</a></li>
+  </ul>
+  <button class="btn-gold mob-cta" onclick="closeMobileNav();openOfferForm();">Get My Cash Offer →</button>
+</div>
+
+<!-- HERO -->
+<section class="faq-hero">
+  <span class="section-label">EVERY QUESTION. ANSWERED.</span>
+  <h1>No Fluff.<br><span>Just Answers.</span></h1>
+  <p>We get asked a lot of questions. Here are the real answers — no marketing speak, no runaround. If you don't find what you're looking for, call Tyler or Riley directly.</p>
+</section>
+
+<!-- FAQ BODY -->
+<div class="faq-body">
+
+  <!-- OUR PROCESS -->
+  <div class="faq-category" id="process">
+    <div class="faq-category-header">
+      <span class="faq-category-icon">⚙️</span>
+      <h2>Our Process</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <div class="faq-question">How does GoldRock's cash home buying process work? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">Pretty simple, actually. You fill out the form, Tyler or Riley calls you, we schedule a walkthrough, and within 24-48 hours of seeing the property we put a real cash offer in your hands. No listings. No showings. Just a straight conversation, a fair number, and a closing date you actually control. That's it.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">What happens after I submit the form? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">Tyler or Riley will reach out to you — fast. We'll have a quick, no-pressure conversation about your situation, your property, and what you're looking for. If it makes sense, we'll schedule a walkthrough. If it doesn't, we'll tell you honestly. No runaround.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Do I have to clean or fix up the house before you visit? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">No. Seriously. Leave it exactly as it is. Full of stuff, dirty, damaged — we don't care. We're not walking through to judge your home. We're walking through to make you an offer. Leave whatever you don't want and walk out.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Do I need a real estate agent to work with GoldRock? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">Nope. You deal directly with Tyler and Riley — that's the whole point. If you already have an agent and want to involve them, that's fine too — we work well with agents.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Is there any cost or obligation to request an offer? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">Zero obligation. Requesting an offer is free and commits you to absolutely nothing. You can say yes, say no, or take some time to think about it. We're not going to pressure you into a decision.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CASH OFFERS -->
+  <div class="faq-category" id="offers">
+    <div class="faq-category-header">
+      <span class="faq-category-icon">💵</span>
+      <h2>Cash Offers</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <div class="faq-question">How is GoldRock's cash offer calculated? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">We look at real Colorado market data, recent comparable sales in your specific neighborhood, and the actual condition of your home. We also factor in rehab and repair costs, holding costs while we own the property, market fluctuations, commissions we pay on the sell side, buyer concessions when we sell, and the risk we're taking on buying as-is. We're not throwing out a fantasy number to get you under contract. We do our homework before we walk through the door — so when we make an offer, it's a number we stand behind.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Will GoldRock's offer be lower than market value? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">It might be. And we'll be upfront about that. But here's what you need to factor in: no agent commissions (5–6%), no repair costs, no staging, no months of carrying costs, no deal falling through at the last second. When you add all that up, many sellers walk away with more — or very close to the same — as they would have through a traditional sale. We'd rather give you an honest number than an inflated one we can't back up.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">How fast will I receive a cash offer? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">We deliver a cash offer within 24-48 hours of the walkthrough. Not 24-48 hours from when you fill out the form — 24-48 hours after we see the property in person. We do our homework before we put a number in your hands.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Are there any fees, commissions, or hidden costs? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">None. Zero. We don't charge commissions. No hidden fees or service costs. We're not going to sneak closing costs into the fine print either.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">What if I get a higher offer from someone else? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">You should absolutely consider it — but read the contract carefully. Is it a Colorado Real Estate Commission approved contract? Is there an inspection period they can use to back out or renegotiate? Is the closing date specified? Is the earnest money held by a title company? If the answer to any of those is no, that "higher" offer may not be worth the paper it's written on. A real offer from GoldRock beats a fake high number every time.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CONTRACTS -->
+  <div class="faq-category" id="contracts">
+    <div class="faq-category-header">
+      <span class="faq-category-icon">📋</span>
+      <h2>Contracts & Paperwork</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <div class="faq-question">What kind of contract does GoldRock use? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">We use <strong>Colorado Real Estate Commission approved contracts</strong> — the same contracts used by licensed Colorado real estate agents and attorneys. Not a self-written document full of vague language. A real, state-approved contract you can hand to your attorney and it'll hold up.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">What should I watch out for with other cash buyers' contracts? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">Most cash buyers in Colorado are NOT using Colorado Real Estate Commission approved contracts. They write their own — filled with vague language, missing closing dates, and no real earnest money deadlines. Watch for: no specified closing date, broad inspection periods they can use to renegotiate, assignment clauses that let them sell your contract to a third party, and minimal earnest money held by themselves rather than a title company. If it's not a CREC approved contract — walk away.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Does GoldRock have an inspection period? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">No. Here's the truth nobody tells you: a real investor doesn't need an inspection period. If someone is buying your home with cash, as-is, they've already done their homework before making the offer. An inspection period in a cash offer is a red flag — it means they're not a real investor. We walk the property, we assess it ourselves, and we make a decision — no inspection contingency, no escape hatch, no way out hiding in the fine print.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Where is the earnest money held? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">Always with a licensed Colorado title company — never in our pocket. It goes straight into escrow under clear, defined conditions that protect you as much as they protect us. You know exactly what happens to it, when it releases, and under what circumstances.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Can I have an attorney review the contract? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">Absolutely — and we encourage it. Because we use CREC approved contracts, any real estate attorney in Colorado will recognize it immediately. We have nothing to hide. The contract is designed to protect both parties, not just us.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- PROPERTY CONDITIONS -->
+  <div class="faq-category" id="conditions">
+    <div class="faq-category-header">
+      <span class="faq-category-icon">🏚</span>
+      <h2>Property Conditions</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <div class="faq-question">Will GoldRock buy my home as-is, even if it needs major repairs? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">Yes. And we mean it. Fire damage, foundation issues, roof falling in, mold, hoarder situation, hasn't been cleaned in years — we don't care. We buy the home exactly as it sits. You don't spend a dollar, lift a finger, or make a single phone call to a contractor before we close.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Do you buy homes with mold, fire damage, or flood damage? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">Yes to all three. Mold doesn't scare us — you don't need to remediate anything before closing. Fire damage, whether partial or total, we assess ourselves and make a real offer. Water and flood damage, rot, structural issues from water — we've seen it all and we still buy.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Do you buy hoarder homes? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">Yes. No judgment, no cleanup required. Leave everything. Take only what you want. We handle everything after closing. We've bought homes in every condition imaginable — a hoarder situation doesn't change our offer process one bit.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">What if there are squatters or tenants in the property? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">We've dealt with occupied properties in every shape and form — bad tenants, mid-eviction situations, squatters, unauthorized occupants. It's not a dealbreaker. We'll talk through the situation and figure out the best path forward.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Do you buy homes with code violations or city citations? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">Yes. Health and safety violations, city orders, open permits — we buy properties with these issues. We understand how to navigate them and they won't kill the deal.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- TIMELINE & CLOSING -->
+  <div class="faq-category" id="timeline">
+    <div class="faq-category-header">
+      <span class="faq-category-icon">📅</span>
+      <h2>Timeline & Closing</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <div class="faq-question">How fast can GoldRock close on my Colorado home? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">As fast as 7 to 14 days — or as slow as you need. We work on your timeline, not ours. We have the cash. When you're ready, we close. It's genuinely that simple.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Who picks the closing date? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">You do. Need to close in 7 days because you're relocating? Done. Need 60 days to find your next place and get your ducks in a row? Also done. You tell us the date, we show up. No buyer asking for a 2-week extension because their dog got sick. You're in control — and that's exactly how it should be.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Is the closing date in the contract? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">Yes. Always. Our contracts have a defined closing date — not "to be determined," not "within a reasonable timeframe," not language so vague a lawyer would laugh. A real date. Written down. And we show up. We already have the cash. We just need the date.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">What happens at closing? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">We close through a licensed Colorado title company. You sign the paperwork, the title company handles the transfer, and you receive your funds — typically by wire transfer the same day or next business day. The whole process is handled professionally, transparently, and without surprises.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SITUATIONS -->
+  <div class="faq-category" id="situations">
+    <div class="faq-category-header">
+      <span class="faq-category-icon">🤝</span>
+      <h2>Situations We Help With</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <div class="faq-question">What types of situations does GoldRock help Colorado homeowners with? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">We help Colorado homeowners in virtually every difficult situation — here's what we specialize in:<br><br>
+        Pre-foreclosure, behind on mortgage payments, forbearance ending, loan default, tax delinquency or tax liens, HOA liens, bankruptcy (Chapter 7 or 13), judgments or creditor liens, wage garnishment pressure, and hard money loans coming due.<br><br>
+        Divorce or separation, inherited property (probate), death in the family, guardianship or conservatorship situations, code violations, and city citations.<br><br>
+        Major repairs needed (roof, foundation, HVAC, sewer), fire damage, flood or water damage, mold, structural problems, vacant and deteriorating property, hoarder houses, vandalized properties, and squatters.<br><br>
+        Job relocation, downsizing, upsizing, retirement transition, health issues or medical bills, moving into assisted living, bad tenants or eviction situations.<br><br>
+        If your situation isn't listed here — reach out anyway. If there's a way to help you, GoldRock will find it.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Can you help if I'm in active foreclosure or facing a foreclosure auction? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">Yes — but time matters enormously. If you have a foreclosure auction scheduled, reach out immediately. The sooner we can get in front of your property and make an offer, the more options you have. Don't wait until the week of the auction. Call now.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Can you buy a property that's in probate? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">Yes. We understand the legal complexity of probate situations and work with you and your attorney to navigate the process. We make it as simple and respectful as possible during what is often an already difficult time.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">My listing expired and didn't sell. Can GoldRock still help? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">Absolutely. A home that sat on the MLS and didn't sell is often exactly the type we buy. It's not that the home can't be sold — it's that it couldn't be sold the traditional way. That's our specialty. Reach out and let's take a look.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SERVICE AREAS -->
+  <div class="faq-category" id="areas">
+    <div class="faq-category-header">
+      <span class="faq-category-icon">📍</span>
+      <h2>Service Areas</h2>
+    </div>
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <div class="faq-question">Which Colorado cities and counties does GoldRock buy homes in? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">If you're wondering whether we buy in your area — the answer is probably yes. We purchase homes throughout the major Front Range markets, including the entire Denver Metro, Colorado Springs Metro, Fort Collins/Loveland area, and Greeley, along with their surrounding communities.<br><br>
+        In the Denver Metro: Denver, Aurora, Lakewood, Thornton, Arvada, Westminster, Centennial, Highlands Ranch, Englewood, Littleton, Wheat Ridge, Northglenn, Commerce City, Brighton, Broomfield, Lafayette, Louisville, Erie, Parker, Castle Rock, Greenwood Village, Golden, Edgewater, and surrounding areas.<br><br>
+        Colorado Springs Metro: Colorado Springs, Fountain, Security-Widefield, Cimarron Hills, Fort Carson, Monument, Palmer Lake, Falcon, Peyton, Black Forest, Manitou Springs.<br><br>
+        Northern Colorado: Fort Collins, Loveland, Windsor, Timnath, Wellington, Berthoud, Johnstown, Greeley, Evans, Milliken, Platteville, Kersey, Erie, Firestone, Frederick.<br><br>
+        If your property is anywhere along the Front Range — even if your city isn't listed — we're likely already buying in your neighborhood.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">Do you buy homes outside the Front Range? <span class="faq-chevron">⌄</span></div>
+        <div class="faq-answer">Possibly. Submit the form and Tyler or Riley will let you know within hours. We evaluate every inquiry individually — don't assume we can't help just because your city isn't on our list.</div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- STILL HAVE QUESTIONS CTA -->
+<div class="faq-cta" style="background:var(--near-black); margin:0 48px 80px; border-radius:20px; padding:56px 48px; text-align:center; max-width:820px; margin-left:auto; margin-right:auto;">
+  <span class="section-label">STILL NOT SURE?</span>
+  <h2 style="font-size:clamp(26px,4vw,40px); font-weight:800; color:white; letter-spacing:-0.8px; margin-bottom:14px;">Just Talk To Tyler or Riley.</h2>
+  <p style="color:#aaa; font-size:16px; margin-bottom:32px; line-height:1.7; max-width:520px; margin-left:auto; margin-right:auto; margin-bottom:32px;">No sales pitch. No pressure. Just a real conversation about your situation and whether GoldRock is the right fit. Takes 5 minutes. Costs nothing.</p>
+  <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+    <button class="btn-gold" style="padding:14px 28px; font-size:16px;" onclick="openOfferForm()">Get My Cash Offer →</button>
+    <a href="about.html" class="btn-outline">Meet Tyler & Riley</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo"><img src="GoldRock_Logo_Flat.jpeg" alt="GoldRock" style="height:36px;width:auto;border-radius:4px;"></div>
+      <p class="footer-tagline">Helping Colorado homeowners sell fast, fair, and hassle-free.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="agents.html">Agents</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Agents</h4>
+      <ul>
+        <li><a href="agents.html">Partner With Us</a></li>
+        <li><a href="agents.html#agentForm">Submit a Referral</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="about.html">Tyler</a></li>
+        <li><a href="about.html">Riley</a></li>
+        <li><a href="about.html#contact">Send Us a Message</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 GoldRock. All rights reserved.</span>
+    <div class="footer-bottom-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<!-- OFFER MODAL -->
+<div id="offerModal" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.6); backdrop-filter:blur(4px); align-items:center; justify-content:center; padding:20px;">
+  <div id="offerModalInner" style="background:white; border-radius:20px; max-width:540px; width:100%; max-height:92vh; overflow-y:auto; padding:40px; position:relative; transform:scale(0.92); opacity:0; transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1), opacity 0.25s ease; box-shadow:0 24px 80px rgba(0,0,0,0.25);">
+    <button onclick="closeOfferForm()" style="position:absolute;top:16px;right:16px;background:none;border:none;cursor:pointer;font-size:22px;color:#999;width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:50%;">✕</button>
+    <div style="text-align:center;margin-bottom:28px;">
+      <p style="font-size:12px;font-weight:700;letter-spacing:2px;color:var(--gold);margin-bottom:8px;">GET YOUR CASH OFFER</p>
+      <h2 style="font-size:24px;font-weight:800;color:var(--text);margin:0;letter-spacing:-0.5px;">Tell Us About Your Property</h2>
+      <p style="color:var(--text-muted);font-size:14px;margin-top:8px;">Click it. Fill it. It takes less time than taking a sh*t.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">
+      <div><label style="display:block;font-size:11px;font-weight:700;color:var(--text-muted);margin-bottom:6px;letter-spacing:1px;">FIRST NAME *</label><input id="mFirstName" type="text" placeholder="First" style="width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:16px;color:var(--text);outline:none;box-sizing:border-box;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'"></div>
+      <div><label style="display:block;font-size:11px;font-weight:700;color:var(--text-muted);margin-bottom:6px;letter-spacing:1px;">LAST NAME *</label><input id="mLastName" type="text" placeholder="Last" style="width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:16px;color:var(--text);outline:none;box-sizing:border-box;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'"></div>
+    </div>
+    <div style="margin-bottom:14px;"><label style="display:block;font-size:11px;font-weight:700;color:var(--text-muted);margin-bottom:6px;letter-spacing:1px;">EMAIL ADDRESS *</label><input id="mEmail" type="email" placeholder="yourname@email.com" style="width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:16px;color:var(--text);outline:none;box-sizing:border-box;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'"></div>
+    <div style="margin-bottom:14px;"><label style="display:block;font-size:11px;font-weight:700;color:var(--text-muted);margin-bottom:6px;letter-spacing:1px;">PHONE NUMBER *</label><input id="mPhone" type="tel" placeholder="(303) 555-0187" style="width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:16px;color:var(--text);outline:none;box-sizing:border-box;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'"></div>
+    <div style="margin-bottom:14px;"><label style="display:block;font-size:11px;font-weight:700;color:var(--text-muted);margin-bottom:6px;letter-spacing:1px;">PROPERTY ADDRESS *</label><input id="mAddress" type="text" placeholder="1234 Blake St, Denver, CO 80202" style="width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:16px;color:var(--text);outline:none;box-sizing:border-box;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'"></div>
+    <div style="margin-bottom:24px;"><label style="display:block;font-size:11px;font-weight:700;color:var(--text-muted);margin-bottom:6px;letter-spacing:1px;">TELL US ABOUT YOUR SITUATION</label><textarea id="mNotes" placeholder="What's going on? Anything we should know..." rows="3" style="width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:16px;color:var(--text);outline:none;resize:vertical;box-sizing:border-box;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'"></textarea></div>
+    <button onclick="submitOfferForm()" style="width:100%;padding:16px;background:var(--gold);color:white;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;cursor:pointer;">Submit — I'm Ready To Get Paid →</button>
+    <div id="modalSuccess" style="display:none;margin-top:16px;background:#f0fdf4;border:1.5px solid #2d7a3a;border-radius:10px;padding:20px;text-align:center;"><p style="font-size:22px;margin-bottom:8px;">✓</p><p style="font-weight:700;color:#2d7a3a;font-size:16px;">You're all set!</p><p style="color:#2d7a3a;font-size:14px;">Tyler or Riley will reach out shortly.</p></div>
+    <p style="font-size:12px;color:var(--text-muted);text-align:center;margin-top:14px;">🔒 Your info is private. We never sell or share your data.</p>
+  </div>
+</div>
+
+
+<script>
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  function toggleMobileNav() {
+    const nav = document.getElementById('mobileNav');
+    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+  }
+  function closeMobileNav() { document.getElementById('mobileNav').style.display = 'none'; }
+
+  function openOfferForm() {
+    const modal = document.getElementById('offerModal');
+    const inner = document.getElementById('offerModalInner');
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => { inner.style.transform = 'scale(1)'; inner.style.opacity = '1'; }, 10);
+  }
+  function closeOfferForm() {
+    const inner = document.getElementById('offerModalInner');
+    inner.style.transform = 'scale(0.92)';
+    inner.style.opacity = '0';
+    setTimeout(() => {
+      document.getElementById('offerModal').style.display = 'none';
+      document.body.style.overflow = '';
+      document.getElementById('modalSuccess').style.display = 'none';
+    }, 280);
+  }
+  document.getElementById('offerModal').addEventListener('click', function(e) {
+    if (e.target === this) closeOfferForm();
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeOfferForm(); });
+
+  function submitOfferForm() {
+    const firstName = document.getElementById('mFirstName').value.trim();
+    const lastName = document.getElementById('mLastName').value.trim();
+    const email = document.getElementById('mEmail').value.trim();
+    const phone = document.getElementById('mPhone').value.trim();
+    const address = document.getElementById('mAddress').value.trim();
+    const notes = document.getElementById('mNotes').value.trim();
+    if (!firstName || !lastName || !email || !phone || !address) { alert('Please fill out all required fields.'); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Please enter a valid email address.'); return; }
+    fetch('https://hooks.zapier.com/hooks/catch/27032074/unzcr6m/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({ firstName, lastName, email, phone, address, notes })
+    }).catch(err => console.error(err));
+    document.getElementById('modalSuccess').style.display = 'block';
+    ['mFirstName','mLastName','mEmail','mPhone','mAddress','mNotes'].forEach(id => document.getElementById(id).value = '');
+  }
+
+  function adjustModal() {
+    const row = document.querySelector('#offerModalInner div[style*="grid-template-columns"]');
+    if (row) row.style.gridTemplateColumns = window.innerWidth < 500 ? '1fr' : '1fr 1fr';
+  }
+  window.addEventListener('resize', adjustModal);
+  adjustModal();
+</script>
+</body>
+</html>

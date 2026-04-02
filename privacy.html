@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<meta name="description" content="GoldRock Privacy Policy — How we collect, use, and protect your information.">
+<title>GoldRock | Privacy Policy</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #D4A832;
+    --gold-dark: #A07830;
+    --near-black: #0A0A0A;
+    --bg: #F5F2EE;
+    --white: #ffffff;
+    --text: #1a1a1a;
+    --text-muted: #6b6b6b;
+    --border: #e5e0d8;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 200;
+    background: var(--white); border-bottom: 1px solid var(--border);
+    padding: 0 48px; height: 64px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .logo { font-size: 20px; font-weight: 700; text-decoration: none; }
+  .logo .g { color: var(--gold); }
+  .logo .r { color: var(--text); }
+  .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+  .nav-links a { text-decoration: none; color: var(--text); font-size: 15px; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--gold); }
+  .btn-gold {
+    background: var(--gold); color: white; border: none;
+    padding: 12px 22px; border-radius: 8px;
+    font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 600;
+    cursor: pointer; transition: background 0.2s, transform 0.15s;
+    text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
+  }
+  .btn-gold:hover { background: var(--gold-dark); transform: translateY(-1px); }
+  #hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; flex-direction: column; gap: 5px; align-items: center; justify-content: center; }
+  #hamburger span { display: block; width: 24px; height: 2.5px; background: var(--text); border-radius: 2px; }
+  #mobileNav { display: none; position: fixed; top: 60px; left: 0; right: 0; background: white; border-bottom: 2px solid var(--gold); z-index: 199; padding: 20px 24px; box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
+  #mobileNav ul { list-style: none; }
+  #mobileNav a { display: block; padding: 14px 0; font-size: 16px; font-weight: 600; color: var(--text); text-decoration: none; border-bottom: 1px solid var(--border); }
+  #mobileNav .mob-cta { margin-top: 16px; width: 100%; padding: 14px; font-size: 15px; justify-content: center; }
+
+  /* HERO */
+  .policy-hero {
+    background: var(--near-black);
+    padding: 72px 48px 64px;
+    text-align: center;
+  }
+  .policy-hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 800; color: white;
+    letter-spacing: -1px; line-height: 1.1;
+    margin-bottom: 14px;
+  }
+  .policy-hero p { color: #aaa; font-size: 15px; }
+
+  /* CONTENT */
+  .policy-body {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 64px 48px 80px;
+  }
+  .policy-section { margin-bottom: 48px; }
+  .policy-section h2 {
+    font-size: 20px; font-weight: 800;
+    color: var(--text); margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--gold);
+    letter-spacing: -0.3px;
+  }
+  .policy-section p {
+    font-size: 15px; color: var(--text-muted);
+    line-height: 1.8; margin-bottom: 14px;
+  }
+  .policy-section p:last-child { margin-bottom: 0; }
+  .policy-section ul {
+    list-style: none; margin: 12px 0; display: flex; flex-direction: column; gap: 10px;
+  }
+  .policy-section ul li {
+    font-size: 15px; color: var(--text-muted); line-height: 1.7;
+    padding-left: 20px; position: relative;
+  }
+  .policy-section ul li::before {
+    content: '—'; position: absolute; left: 0; color: var(--gold); font-weight: 700;
+  }
+  .policy-section a { color: var(--gold); text-decoration: none; }
+  .policy-section a:hover { text-decoration: underline; }
+  .last-updated {
+    font-size: 13px; color: var(--text-muted);
+    text-align: center; margin-bottom: 48px;
+    padding: 12px 20px; background: var(--bg);
+    border-radius: 8px; border-left: 3px solid var(--gold);
+    text-align: left;
+  }
+
+  /* FOOTER */
+  footer { background: #0a0a0a; padding: 60px 48px 0; color: white; }
+  .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 48px; border-bottom: 1px solid #222; }
+  .footer-logo { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+  .footer-logo .g { color: var(--gold); }
+  .footer-tagline { color: #888; font-size: 14px; line-height: 1.6; }
+  .footer-col h4 { font-size: 14px; font-weight: 600; margin-bottom: 14px; color: white; }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 10px; }
+  .footer-col a { color: #888; font-size: 14px; text-decoration: none; transition: color 0.2s; }
+  .footer-col a:hover { color: #ddd; }
+  .footer-bottom { padding: 20px 0; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: #555; flex-wrap: wrap; gap: 10px; }
+  .footer-bottom-links { display: flex; gap: 20px; }
+  .footer-bottom-links a { color: #555; text-decoration: none; }
+  .footer-bottom-links a:hover { color: #aaa; }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    nav { padding: 0 20px; height: 60px; }
+    .nav-links { display: none; }
+    .btn-gold { display: none; }
+    #hamburger { display: flex; }
+    .policy-hero { padding: 52px 20px 44px; }
+    .policy-body { padding: 40px 20px 60px; }
+    .policy-section h2 { font-size: 18px; }
+    footer { padding: 40px 20px 0; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 24px; padding-bottom: 32px; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+    .footer-bottom-links { justify-content: center; }
+  }
+  @media (max-width: 480px) {
+    .footer-grid { grid-template-columns: 1fr; gap: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" style="display:flex;align-items:center;text-decoration:none;">
+    <img src="GoldRock_Logo_Flat.jpeg" alt="GoldRock" style="height:42px;width:auto;display:block;border-radius:6px;">
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="agents.html">Agents</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="about.html">About Us</a></li>
+  </ul>
+  <div style="display:flex;align-items:center;gap:12px;">
+    <button class="btn-gold" onclick="openOfferForm()">Get My Cash Offer</button>
+    <button id="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div id="mobileNav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="agents.html">Agents</a></li>
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="about.html">About Us</a></li>
+  </ul>
+  <button class="btn-gold mob-cta" onclick="closeMobileNav();openOfferForm();">Get My Cash Offer →</button>
+</div>
+
+<!-- HERO -->
+<section class="policy-hero">
+  <h1>Privacy Policy</h1>
+  <p>Last updated: March 31, 2026</p>
+</section>
+
+<!-- BODY -->
+<div class="policy-body">
+
+  <div class="last-updated">
+    This Privacy Policy explains how GoldRock ("we," "us," or "our") collects, uses, and protects the information you provide when you visit our website or submit a form. We take your privacy seriously and will never sell or misuse your personal information.
+  </div>
+
+  <div class="policy-section">
+    <h2>1. Information We Collect</h2>
+    <p>When you interact with our website or submit an inquiry, we may collect the following types of information:</p>
+    <ul>
+      <li>Name and contact information you voluntarily provide</li>
+      <li>Property or transaction-related information you choose to share</li>
+      <li>Any other details you voluntarily provide through our contact forms</li>
+    </ul>
+    <p>We may also collect basic technical information automatically, such as your browser type, IP address, and pages visited, through standard web analytics tools. This information is used only to improve our website and is never tied to your personal identity.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>2. How We Use Your Information</h2>
+    <p>We use the information you submit solely to:</p>
+    <ul>
+      <li>Contact you about your property and discuss a potential cash offer</li>
+      <li>Schedule a walkthrough or follow-up conversation</li>
+      <li>Send you relevant communications related to your inquiry</li>
+      <li>Improve our website and the experience we provide</li>
+    </ul>
+    <p>We may use your contact information to follow up on your inquiry, provide updates related to your property, or share relevant information about our services. You may opt out of communications at any time by contacting us directly.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>3. How We Share Your Information</h2>
+    <p>We do not sell, rent, or trade your personal information to third parties. Ever.</p>
+    <p>We may use trusted third-party service providers to help operate our business and deliver your inquiry to our team, including:</p>
+    <ul>
+      <li>Automation and communication platforms that route form submissions to our internal team</li>
+      <li>Email and messaging services used solely for internal notification purposes</li>
+    </ul>
+    <p>These tools are used only to deliver your information to our team. They do not store, sell, or use your data for any other purpose. We may also disclose your information if required by law or to protect the rights and safety of our team or others.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>4. Data Retention</h2>
+    <p>We retain your information for as long as reasonably necessary to fulfill the purposes outlined in this policy or as required by applicable law. When information is no longer needed, we take reasonable steps to delete or anonymize it.</p>
+    <p>You may request that we delete your information at any time by contacting us through our <a href="about.html#contact">contact form</a>.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>5. Cookies & Analytics</h2>
+    <p>Our website may use cookies and similar tracking technologies to understand how visitors use our site. This information is aggregated and anonymous — it helps us understand which pages are most helpful and how to improve the experience for homeowners like you.</p>
+    <p>You can disable cookies in your browser settings at any time. Doing so will not affect your ability to use our website or submit a form.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>6. Your Rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li>Request a copy of the personal information we hold about you</li>
+      <li>Request that we correct any inaccurate information</li>
+      <li>Request that we delete your information from our records</li>
+      <li>Opt out of any future communications from us at any time</li>
+    </ul>
+    <p>To exercise any of these rights, simply reach out through our <a href="about.html#contact">contact form</a>. We will respond within 5 business days.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>7. Data Security</h2>
+    <p>We take reasonable steps to protect your personal information from unauthorized access, loss, or misuse. Our forms are transmitted securely, and access to your information is limited to authorized team members only.</p>
+    <p>No method of data transmission or storage is 100% secure. While we work hard to protect your information, we cannot guarantee absolute security.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>8. Third-Party Links</h2>
+    <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices of those sites and encourage you to review their privacy policies before submitting any personal information.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>9. Children's Privacy</h2>
+    <p>Our website is not directed at individuals under the age of 18. We do not knowingly collect personal information from minors. If you believe a minor has submitted information through our website, please contact us and we will remove it promptly.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>10. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. We encourage you to review this policy periodically. Continued use of our website after any changes constitutes your acceptance of the updated policy.</p>
+  </div>
+
+  <div class="policy-section">
+    <h2>11. Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy or how we handle your information, please contact us:</p>
+    <ul>
+      <li><a href="about.html#contact">Fill out our contact form →</a></li>
+    </ul>
+    <p style="margin-top:16px;">If you have a concern, please reach out using any of the contact methods above and we will respond promptly.</p>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo"><img src="GoldRock_Logo_Flat.jpeg" alt="GoldRock" style="height:36px;width:auto;border-radius:4px;"></div>
+      <p class="footer-tagline">Helping Colorado homeowners sell fast, fair, and hassle-free.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="agents.html">Agents</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Agents</h4>
+      <ul>
+        <li><a href="agents.html">Partner With Us</a></li>
+        <li><a href="agents.html#agentForm">Submit a Referral</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="about.html">Tyler</a></li>
+        <li><a href="about.html">Riley</a></li>
+        <li><a href="about.html#contact">Send Us a Message</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 GoldRock. All rights reserved.</span>
+    <div class="footer-bottom-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<!-- OFFER MODAL -->
+<div id="offerModal" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:20px;">
+  <div id="offerModalInner" style="background:white;border-radius:20px;max-width:540px;width:100%;max-height:92vh;overflow-y:auto;padding:40px;position:relative;transform:scale(0.92);opacity:0;transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1),opacity 0.25s ease;box-shadow:0 24px 80px rgba(0,0,0,0.25);">
+    <button onclick="closeOfferForm()" style="position:absolute;top:16px;right:16px;background:none;border:none;cursor:pointer;font-size:22px;color:#999;width:32px;height:32px;display:flex;align-items:center;justify-content:center;border-radius:50%;">✕</button>
+    <div style="text-align:center;margin-bottom:28px;">
+      <p style="font-size:12px;font-weight:700;letter-spacing:2px;color:var(--gold);margin-bottom:8px;">GET YOUR CASH OFFER</p>
+      <h2 style="font-size:24px;font-weight:800;color:var(--text);margin:0;">Tell Us About Your Property</h2>
+      <p style="color:var(--text-muted);font-size:14px;margin-top:8px;">Click it. Fill it. It takes less time than taking a sh*t.</p>
+    </div>
+    <div id="modalNameRow" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">
+      <div><label style="display:block;font-size:11px;font-weight:700;color:var(--text-muted);margin-bottom:6px;letter-spacing:1px;">FIRST NAME *</label><input id="mFirstName" type="text" placeholder="First" style="width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:16px;outline:none;box-sizing:border-box;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'"></div>
+      <div><label style="display:block;font-size:11px;font-weight:700;color:var(--text-muted);margin-bottom:6px;letter-spacing:1px;">LAST NAME *</label><input id="mLastName" type="text" placeholder="Last" style="width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:16px;outline:none;box-sizing:border-box;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'"></div>
+    </div>
+    <div style="margin-bottom:14px;"><label style="display:block;font-size:11px;font-weight:700;color:var(--text-muted);margin-bottom:6px;letter-spacing:1px;">EMAIL *</label><input id="mEmail" type="email" placeholder="yourname@email.com" style="width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:16px;outline:none;box-sizing:border-box;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'"></div>
+    <div style="margin-bottom:14px;"><label style="display:block;font-size:11px;font-weight:700;color:var(--text-muted);margin-bottom:6px;letter-spacing:1px;">PHONE *</label><input id="mPhone" type="tel" placeholder="(303) 555-0187" style="width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:16px;outline:none;box-sizing:border-box;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'"></div>
+    <div style="margin-bottom:14px;"><label style="display:block;font-size:11px;font-weight:700;color:var(--text-muted);margin-bottom:6px;letter-spacing:1px;">PROPERTY ADDRESS *</label><input id="mAddress" type="text" placeholder="1234 Blake St, Denver, CO 80202" style="width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:16px;outline:none;box-sizing:border-box;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'"></div>
+    <div style="margin-bottom:24px;"><label style="display:block;font-size:11px;font-weight:700;color:var(--text-muted);margin-bottom:6px;letter-spacing:1px;">TELL US ABOUT YOUR SITUATION</label><textarea id="mNotes" placeholder="What's going on? Anything we should know..." rows="3" style="width:100%;padding:12px 14px;border:1.5px solid var(--border);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:16px;outline:none;resize:vertical;box-sizing:border-box;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'"></textarea></div>
+    <button onclick="submitOfferForm()" style="width:100%;padding:16px;background:var(--gold);color:white;border:none;border-radius:10px;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:600;cursor:pointer;">Submit — I'm Ready To Get Paid →</button>
+    <div id="modalSuccess" style="display:none;margin-top:16px;background:#f0fdf4;border:1.5px solid #2d7a3a;border-radius:10px;padding:20px;text-align:center;"><p style="font-size:22px;margin-bottom:8px;">✓</p><p style="font-weight:700;color:#2d7a3a;font-size:16px;">You're all set!</p><p style="color:#2d7a3a;font-size:14px;">Our team will reach out shortly.</p></div>
+    <p style="font-size:12px;color:var(--text-muted);text-align:center;margin-top:14px;">🔒 Your info is private. We never sell or share your data.</p>
+  </div>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  function toggleMobileNav() {
+    const nav = document.getElementById('mobileNav');
+    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+  }
+  function closeMobileNav() { document.getElementById('mobileNav').style.display = 'none'; }
+
+  function openOfferForm() {
+    const modal = document.getElementById('offerModal');
+    const inner = document.getElementById('offerModalInner');
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => { inner.style.transform = 'scale(1)'; inner.style.opacity = '1'; }, 10);
+  }
+  function closeOfferForm() {
+    const inner = document.getElementById('offerModalInner');
+    inner.style.transform = 'scale(0.92)'; inner.style.opacity = '0';
+    setTimeout(() => { document.getElementById('offerModal').style.display = 'none'; document.body.style.overflow = ''; document.getElementById('modalSuccess').style.display = 'none'; }, 280);
+  }
+  document.getElementById('offerModal').addEventListener('click', function(e) { if (e.target === this) closeOfferForm(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeOfferForm(); });
+
+  function submitOfferForm() {
+    const firstName = document.getElementById('mFirstName').value.trim();
+    const lastName = document.getElementById('mLastName').value.trim();
+    const email = document.getElementById('mEmail').value.trim();
+    const phone = document.getElementById('mPhone').value.trim();
+    const address = document.getElementById('mAddress').value.trim();
+    const notes = document.getElementById('mNotes').value.trim();
+    if (!firstName || !lastName || !email || !phone || !address) { alert('Please fill out all required fields.'); return; }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { alert('Please enter a valid email address.'); return; }
+    fetch('https://hooks.zapier.com/hooks/catch/27032074/unzcr6m/', {
+      method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({ firstName, lastName, email, phone, address, notes })
+    }).catch(err => console.error(err));
+    document.getElementById('modalSuccess').style.display = 'block';
+    ['mFirstName','mLastName',
