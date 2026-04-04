@@ -1,0 +1,2055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GoldRock | Turn Your Colorado Home Into Cash</title>
+<link rel="icon" type="image/jpeg" href="GoldRock_Logo_Flat.jpeg">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=Oswald:wght@700&family=Playfair+Display:wght@700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #D4A832;
+    --gold-light: #E8C040;
+    --gold-btn: #D4A832;
+    --gold-dark: #A07830;
+    --dark: #111111;
+    --near-black: #0A0A0A;
+    --bg: #F5F2EE;
+    --bg-light: #fafaf8;
+    --white: #ffffff;
+    --text: #1a1a1a;
+    --text-muted: #6b6b6b;
+    --text-light: #999;
+    --border: #e5e0d8;
+    --card-bg: #ffffff;
+    --radius: 12px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 0 48px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+  .logo span:first-child { color: var(--gold); }
+  .logo span:last-child { color: var(--text); }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    list-style: none;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  @keyframes btnNone {
+    0% {}
+    100% {}
+  }
+  .btn-gold {
+    background: var(--gold-btn);
+    color: var(--white);
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    
+  }
+  .btn-gold:hover { background: var(--gold-dark); transform: translateY(-2px) scale(1.04); }
+
+  /* HERO */
+  .hero {
+    background: var(--near-black);
+    text-align: center;
+    padding: 60px 24px 80px;
+    min-height: calc(100vh - 64px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(212,168,50,0.15);
+    border: 1px solid rgba(212,168,50,0.3);
+    border-radius: 100px;
+    padding: 8px 18px;
+    font-size: 14px;
+    color: var(--gold);
+    font-weight: 500;
+    margin-bottom: 32px;
+  }
+  .hero-badge svg { width: 16px; height: 16px; }
+
+  .hero h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(42px, 5vw, 68px);
+    font-weight: 800;
+    line-height: 1.0;
+    letter-spacing: -1px;
+    margin-bottom: 0;
+  }
+  .hero h1 .line-1 { color: var(--white); display: block; }
+  .hero h1 .line-2 { color: var(--gold); display: block; }
+  .hero h1 .line-3 { color: #c0bbb5; display: block; }
+
+  .hero-sub {
+    font-size: 18px;
+    color: #aaa;
+    margin: 20px 0 36px;
+    font-weight: 400;
+    max-width: 640px;
+    width: 100%;
+  }
+
+  .hero-form {
+    display: flex;
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    max-width: 580px;
+    width: 100%;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  }
+  .hero-form input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 16px 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    color: var(--text);
+    background: transparent;
+  }
+  .hero-form input::placeholder { color: var(--text-light); }
+  .hero-form .btn-gold {
+    border-radius: 0 10px 10px 0;
+    padding: 16px 24px;
+    font-size: 15px;
+    white-space: nowrap;
+  }
+
+  .hero-trust {
+    margin-top: 20px;
+    background: rgba(255,255,255,0.06);
+    border: 1.5px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    padding: 14px 28px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    max-width: 580px;
+    width: 100%;
+    font-size: 14px;
+  }
+  .hero-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #aaa;
+  }
+  .hero-trust-item svg { color: var(--gold); width: 16px; height: 16px; flex-shrink: 0; }
+  .hero-trust-divider { width: 1px; height: 32px; background: rgba(255,255,255,0.15); }
+  .stars { color: var(--gold); font-size: 16px; letter-spacing: 1px; }
+  .rating-val { font-weight: 700; color: white; }
+
+  /* SECTION LABELS */
+  .section-label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 12px;
+  }
+
+  /* VIDEO SECTION */
+  .video-section {
+    background: var(--bg);
+    padding: 80px 48px;
+    text-align: center;
+    overflow: hidden;
+  }
+  .video-scale-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .video-thumb {
+    position: relative;
+    width: 100%;
+    max-width: 780px;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    transform: scale(0.72);
+    transition: transform 0.1s linear, box-shadow 0.3s ease;
+    will-change: transform;
+  }
+  .video-thumb.popped {
+    box-shadow: 0 40px 100px rgba(0,0,0,0.28);
+  }
+  .video-thumb img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.55);
+  }
+  .video-thumb-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+  .play-btn {
+    width: 72px;
+    height: 72px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, background 0.2s;
+  }
+  .video-thumb:hover .play-btn { transform: scale(1.1); background: var(--gold-dark); }
+  .play-btn svg { width: 28px; height: 28px; fill: white; margin-left: 4px; }
+  .video-caption { color: white; font-weight: 600; font-size: 18px; }
+
+  /* 3 STEPS */
+  .steps-section {
+    background: var(--bg);
+    padding: 80px 48px;
+    text-align: center;
+  }
+  .steps-section h2 {
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 60px;
+  }
+  .steps-timeline {
+    max-width: 640px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .steps-timeline::before {
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 28px;
+    bottom: 28px;
+    width: 2px;
+    background: var(--border);
+  }
+  /* SCROLL ANIMATION FOR STEPS */
+  .step {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 48px;
+    text-align: left;
+    position: relative;
+    align-items: flex-start;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease, opacity 0.6s ease, translate 0.6s ease;
+    cursor: pointer;
+    border-radius: 16px;
+    padding: 12px;
+    margin-left: -12px;
+    opacity: 0;
+    translate: 0 40px;
+  }
+  .step.step-visible {
+    opacity: 1;
+    translate: 0 0;
+  }
+  .step:hover {
+    transform: scale(1.06) translateX(12px);
+    z-index: 2;
+  }
+  .step-card, .step-content {
+    flex: 1;
+  }
+  .step-num {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 18px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s ease;
+    background: var(--gold);
+    color: white;
+  }
+  .step:hover .step-num {
+    transform: scale(1.3);
+    box-shadow: 0 12px 32px rgba(212, 168, 50, 0.55);
+  }
+  .step-content h3, .step-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+    color: var(--text);
+    transition: color 0.3s ease;
+  }
+  .step:hover .step-content h3,
+  .step:hover .step-card h3 {
+    color: var(--gold);
+  }
+  .step-content p, .step-card p { font-size: 15px; color: var(--text-muted); line-height: 1.6; }
+  .step-card {
+    background: #f0ece4;
+    border-radius: 12px;
+    padding: 20px 24px;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+  .step:hover .step-card {
+    border-color: var(--gold);
+  }
+  .step-card h3 { color: var(--text); }
+  .steps-cta { margin-top: 12px; }
+
+  /* FEATURES */
+  .features-section {
+    background: var(--bg-light);
+    padding: 80px 48px;
+    text-align: center;
+  }
+  .features-section h2 {
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+  }
+  .features-section .subtitle {
+    color: var(--text-muted);
+    font-size: 16px;
+    max-width: 500px;
+    margin: 0 auto 56px;
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px 64px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .feature-icon {
+    width: 48px;
+    height: 48px;
+    background: #f0ece4;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    color: var(--gold);
+    font-size: 20px;
+  }
+  .feature h3 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.2px;
+  }
+  .feature p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+  /* STATS + ABOUT */
+  .stats-section {
+    background: var(--bg-light);
+    padding: 20px 48px 80px;
+    text-align: center;
+  }
+  .stats-row {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 72px;
+  }
+  .stat-val {
+    font-size: 56px;
+    font-weight: 800;
+    letter-spacing: -2px;
+    color: var(--text);
+    line-height: 1;
+  }
+  .stat-label { font-size: 14px; color: var(--text-muted); margin-top: 6px; }
+
+  .about-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+    text-align: left;
+  }
+  .about-img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+  .about-content .section-label { margin-bottom: 12px; }
+  .about-content h2 {
+    font-size: clamp(26px, 4vw, 40px);
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    margin-bottom: 20px;
+    line-height: 1.15;
+  }
+  .about-content p {
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .as-seen-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-light);
+    margin-bottom: 12px;
+    margin-top: 28px;
+  }
+  .press-logos {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    margin-bottom: 28px;
+  }
+  .press-logo {
+    font-size: 17px;
+    font-weight: 700;
+    color: #ccc;
+    letter-spacing: -0.3px;
+  }
+
+  /* REVIEWS */
+  .reviews-section {
+    background: var(--bg);
+    padding: 80px 0;
+  }
+  .reviews-header {
+    padding: 0 48px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  .reviews-header h2 {
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 800;
+    letter-spacing: -1px;
+  }
+  .carousel-btns { display: flex; gap: 10px; }
+  .carousel-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1.5px solid var(--border);
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--text);
+    transition: all 0.2s;
+  }
+  .carousel-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+  .reviews-track-wrapper { overflow: hidden; padding: 0 48px; }
+  .reviews-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.4s ease;
+  }
+  .review-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    min-width: 280px;
+    flex-shrink: 0;
+  }
+  .review-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 4px;
+  }
+  .reviewer-name { font-weight: 700; font-size: 15px; }
+  .reviewer-source { font-size: 12px; color: var(--text-muted); }
+  .reviewer-city { font-size: 13px; color: var(--text-muted); margin-bottom: 12px; }
+  .review-stars { color: var(--gold); font-size: 18px; letter-spacing: 2px; margin-bottom: 14px; }
+  .review-text { font-size: 14px; color: var(--text); line-height: 1.65; }
+
+  /* FAQ */
+  .faq-section {
+    background: var(--bg-light);
+    padding: 80px 48px;
+    text-align: center;
+  }
+  .faq-section h2 {
+    font-size: clamp(28px, 4vw, 44px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 40px;
+  }
+  .faq-list {
+    max-width: 580px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1.5px solid var(--border);
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-question {
+    padding: 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+    font-size: 15px;
+    transition: background 0.15s;
+    gap: 16px;
+  }
+  .faq-question:hover { background: #fafaf8; }
+  .faq-chevron {
+    color: var(--gold);
+    font-size: 20px;
+    transition: transform 0.25s;
+    flex-shrink: 0;
+    margin-left: 16px;
+  }
+  .faq-item.open .faq-chevron { transform: rotate(180deg); }
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s;
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.65;
+    padding: 0 24px;
+  }
+  .faq-item.open .faq-answer { max-height: 600px; padding: 0 24px 20px; overflow-y: auto; }
+
+  .faq-footer { margin-top: 32px; }
+  .faq-footer p { color: var(--text-muted); font-size: 15px; margin-bottom: 16px; }
+
+  /* CTA SECTION */
+  .cta-section {
+    background: var(--near-black);
+    padding: 80px 48px;
+    text-align: center;
+  }
+  .cta-section h2 {
+    font-size: clamp(28px, 5vw, 52px);
+    font-weight: 800;
+    color: white;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+  }
+  .cta-section p { color: #888; font-size: 16px; margin-bottom: 40px; }
+  .cta-form {
+    display: flex;
+    max-width: 540px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1.5px solid #333;
+  }
+  .cta-form input {
+    flex: 1;
+    background: #1a1a1a;
+    border: none;
+    outline: none;
+    padding: 16px 20px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    color: white;
+  }
+  .cta-form input::placeholder { color: #555; }
+  .cta-form .btn-gold { border-radius: 0 8px 8px 0; }
+
+  /* FOOTER */
+  footer {
+    background: #0a0a0a;
+    padding: 60px 48px 0;
+    color: white;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid #222;
+  }
+  .footer-logo {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .footer-logo span:first-child { color: var(--gold); }
+  .footer-tagline { color: #888; font-size: 14px; line-height: 1.6; margin-bottom: 20px; }
+  .social-icons { display: flex; gap: 14px; }
+  .social-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 6px;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+    color: #aaa;
+  }
+  .social-icon:hover { background: #2a2a2a; }
+  .footer-col h4 { font-size: 14px; font-weight: 600; margin-bottom: 16px; color: #fff; }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 10px; }
+  .footer-col a { color: #888; font-size: 14px; text-decoration: none; transition: color 0.2s; }
+  .footer-col a:hover { color: #ddd; }
+
+  .footer-bottom {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: #555;
+  }
+  .footer-bottom-links { display: flex; gap: 20px; }
+  .footer-bottom-links a { color: #555; text-decoration: none; transition: color 0.2s; }
+  .footer-bottom-links a:hover { color: #aaa; }
+
+  /* ============================================
+     MOBILE OPTIMIZATION — FULL & COMPLETE
+     ============================================ */
+
+  @media (max-width: 768px) {
+
+    /* NAV */
+    nav {
+      padding: 0 20px;
+      height: 60px;
+    }
+    .nav-links { display: none; }
+    .logo { font-size: 18px; }
+    nav .btn-gold { display: none; }
+    #hamburger { display: flex !important; }
+
+    /* HERO */
+    .hero {
+      padding: 48px 20px 56px;
+      min-height: unset;
+    }
+    .hero-badge {
+      font-size: 11px;
+      padding: 7px 14px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-size: clamp(36px, 9vw, 56px);
+      letter-spacing: -1px;
+    }
+    .hero-sub {
+      font-size: 15px;
+      margin: 16px 0 28px;
+    }
+    .hero-trust {
+      flex-direction: column;
+      gap: 12px;
+      padding: 16px 20px;
+      text-align: center;
+    }
+    .hero-trust-divider { display: none; }
+    .hero-trust-item { justify-content: center; font-size: 13px; }
+
+    /* VIDEO */
+    .video-section { padding: 48px 20px; }
+    .video-thumb img { height: 220px; }
+    .play-btn { width: 56px; height: 56px; }
+    .play-btn svg { width: 22px; height: 22px; }
+    .video-caption { font-size: 15px; }
+
+    /* STEPS */
+    .steps-section { padding: 56px 20px; }
+    .steps-section h2 { font-size: clamp(26px, 7vw, 40px); margin-bottom: 40px; }
+    .steps-timeline::before { left: 24px; }
+    .step { gap: 16px; margin-bottom: 32px; padding: 8px; margin-left: -8px; }
+    .step-num { width: 48px; height: 48px; font-size: 16px; }
+    .step-card { padding: 16px 18px; }
+    .step-card h3 { font-size: 17px; }
+    .step-card p { font-size: 14px; }
+
+    /* FEATURES */
+    .features-section { padding: 56px 20px; }
+    .features-section h2 { font-size: clamp(26px, 7vw, 40px); }
+    .features-grid { grid-template-columns: 1fr; gap: 28px; max-width: 100%; }
+    .feature h3 { font-size: 16px; }
+
+    /* STATS */
+    .stats-section { padding: 48px 20px; }
+    .stats-row {
+      flex-direction: column;
+      gap: 28px;
+      align-items: center;
+      margin-bottom: 48px;
+    }
+    .stat-val { font-size: 48px; }
+    .stat-label { font-size: 14px; }
+
+    /* WHO WE HELP SECTION */
+    section[style*="WE'VE SEEN IT ALL"],
+    .who-section { padding: 56px 20px !important; }
+
+    /* SERVICE AREAS */
+    section[style*="WHERE WE BUY"] { padding: 56px 20px !important; }
+
+    /* COMPARISON */
+    section[style*="THE HONEST TRUTH"] { padding: 40px 16px !important; }
+    section[style*="THE HONEST TRUTH"] div[style*="grid-template-columns:1fr 1fr"],
+    section[style*="THE HONEST TRUTH"] div[style*="grid-template-columns: 1fr 1fr"] {
+      grid-template-columns: 1fr !important;
+      gap: 16px !important;
+    }
+    section[style*="THE HONEST TRUTH"] div[style*="padding:32px"] { padding: 20px 16px !important; }
+    section[style*="THE HONEST TRUTH"] div[style*="padding: 32px"] { padding: 20px 16px !important; }
+    section[style*="THE HONEST TRUTH"] div[style*="padding:24px 32px"] { padding: 18px 16px !important; }
+    section[style*="THE HONEST TRUTH"] p[style*="font-size:14px"] { font-size: 13px !important; }
+    section[style*="THE HONEST TRUTH"] p[style*="font-size:15px"] { font-size: 14px !important; }
+    section[style*="THE HONEST TRUTH"] h3 { font-size: 18px !important; }
+    section[style*="THE HONEST TRUTH"] div[style*="display:flex; gap:14px"] { gap: 10px !important; }
+    section[style*="THE HONEST TRUTH"] div[style*="display:flex; flex-direction:column; gap:20px"] { gap: 16px !important; }
+    /* Also catch comparison via grid selector */
+    div[style*="grid-template-columns: 1fr 1fr"] {
+      grid-template-columns: 1fr !important;
+    }
+    div[style*="grid-template-columns:1fr 1fr"] {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* REVIEWS */
+    .reviews-section { padding: 56px 0; }
+    .reviews-header { padding: 0 20px; flex-direction: column; gap: 16px; }
+    .reviews-header h2 { font-size: clamp(24px, 6vw, 36px); }
+    .reviews-track-wrapper { padding: 0 20px; }
+    .review-card { min-width: 280px; }
+
+    /* FAQ */
+    .faq-section { padding: 56px 20px; }
+    .faq-section h2 { font-size: clamp(26px, 7vw, 40px); }
+    .faq-question { font-size: 14px; padding: 16px 18px; }
+    .faq-answer { font-size: 13px; padding: 0 18px; }
+    .faq-item.open .faq-answer { padding: 0 18px 16px; }
+
+    /* CTA */
+    .cta-section { padding: 56px 20px; }
+    .cta-section h2 { font-size: clamp(26px, 7vw, 40px); }
+    .cta-form { flex-direction: column; border-radius: 10px; border: none; gap: 10px; background: transparent; }
+    .cta-form input {
+      border-radius: 8px !important;
+      border: 1.5px solid #333;
+      padding: 14px 16px;
+      width: 100%;
+    }
+    .cta-form .btn-gold {
+      border-radius: 8px !important;
+      padding: 14px 20px;
+      width: 100%;
+      justify-content: center;
+    }
+
+    /* FOOTER */
+    footer { padding: 48px 20px 0; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; padding-bottom: 40px; }
+    .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+    .footer-bottom-links { justify-content: center; }
+
+    /* MODAL */
+    #offerModalInner {
+      padding: 28px 20px !important;
+      max-height: 95vh;
+      border-radius: 16px !important;
+    }
+    #offerModalInner div[style*="grid-template-columns:1fr 1fr"] {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* WHO WE HELP CARDS */
+    div[style*="grid-template-columns: repeat(3,1fr)"] {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* SERVICE AREA CARDS */
+    div[style*="grid-template-columns:repeat(2,1fr)"] {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* SECTION LABELS */
+    .section-label { font-size: 11px; }
+
+    /* GENERAL SECTION PADDING */
+    section { padding-left: 20px !important; padding-right: 20px !important; }
+    .video-section,
+    .steps-section,
+    .features-section,
+    .stats-section,
+    .faq-section,
+    .cta-section {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    /* STEP HOVER — disable on mobile */
+    .step:hover {
+      transform: none;
+      box-shadow: none;
+    }
+    .step:hover .step-num {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero h1 { font-size: clamp(30px, 10vw, 44px); }
+    .hero-badge { font-size: 10px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 24px; }
+    .stat-val { font-size: 40px; }
+    .features-grid { grid-template-columns: 1fr; }
+    .hero-trust-item { font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" style="display:flex;align-items:center;text-decoration:none;">
+    <img src="GoldRock_Logo_Flat.jpeg" alt="GoldRock" style="height:42px;width:auto;display:block;border-radius:6px;">
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    
+    <li><a href="faq.html">FAQ</a></li>
+    <li><a href="about.html">About Us</a></li>
+  </ul>
+  <div style="display:flex; align-items:center; gap:12px;">
+    <button class="btn-gold" onclick="openOfferForm()">Get My Cash Offer</button>
+    <button id="hamburger" onclick="toggleMobileNav()" style="background:none; border:none; cursor:pointer; padding:6px; flex-direction:column; gap:5px; align-items:center; justify-content:center;">
+      <span class="bar" style="display:block; width:24px; height:2.5px; background:var(--text); border-radius:2px; transition:all 0.3s;"></span>
+      <span class="bar" style="display:block; width:24px; height:2.5px; background:var(--text); border-radius:2px; transition:all 0.3s;"></span>
+      <span class="bar" style="display:block; width:24px; height:2.5px; background:var(--text); border-radius:2px; transition:all 0.3s;"></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE NAV DRAWER -->
+<div id="mobileNav" style="display:none; position:fixed; top:60px; left:0; right:0; background:white; border-bottom:2px solid var(--gold); z-index:99; padding:20px 24px; box-shadow:0 8px 32px rgba(0,0,0,0.12);">
+  <ul style="list-style:none; display:flex; flex-direction:column; gap:0;">
+    <li><a href="index.html" style="display:block; padding:14px 0; font-size:16px; font-weight:600; color:var(--text); text-decoration:none; border-bottom:1px solid var(--border);">Home</a></li>
+    <li><a href="faq.html" style="display:block; padding:14px 0; font-size:16px; font-weight:600; color:var(--text); text-decoration:none; border-bottom:1px solid var(--border);">FAQ</a></li>
+    <li><a href="about.html" style="display:block; padding:14px 0; font-size:16px; font-weight:600; color:var(--text); text-decoration:none; border-bottom:1px solid var(--border);">About Us</a></li>
+    <li style="padding-top:16px;"><button class="btn-gold" style="width:100%; padding:14px; font-size:15px; justify-content:center; display:flex;" onclick="closeMobileNav(); openOfferForm();">Get My Cash Offer →</button></li>
+  </ul>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">
+    ★ NO MORE 'HOPING-AND-PRAYING' ★
+  </div>
+  <h1>
+    <span class="line-1">Turn Your Colorado Home into <span style="color:var(--gold)">CASH</span></span>
+    <span class="line-3" style="font-size: clamp(24px, 3vw, 42px); color: var(--gold);">Any Condition. Any Situation. Zero Bullsh*t.</span>
+  </h1>
+  <p class="hero-sub">Look, selling your home is hard. Really hard... We're not going to pretend otherwise. But it doesn't have to be the hardest thing you've ever done. GoldRock makes it a hell of a lot easier, faster, and way less painful. Plus... you walk away with cash in your pocket. Not promises. Cash.</p>
+  <button onclick="openOfferForm()" class="btn-gold" style="padding:18px 40px; font-size:17px; border-radius:10px;">Get My Cash Offer →</button>
+  <p style="font-size:13px; color:var(--text-muted); margin-top:12px;">Zero obligation. 100% free. Tyler or Riley will be in touch fast.</p>
+  <div class="hero-trust">
+    <div class="hero-trust-item">
+      <span class="stars">★★★★★</span>
+      <span class="rating-val">4.9/5</span>
+      <span>trusted by over 100+ homeowners</span>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section class="video-section">
+  <p class="section-label">WATCH HOW IT WORKS</p>
+  <div class="video-scale-wrapper">
+    <div class="video-thumb" onclick="this.style.opacity='0.8'" id="videoThumb">
+      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=900&q=80" alt="House at night">
+      <div class="video-thumb-overlay">
+        <div class="play-btn">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 STEPS -->
+<section class="steps-section" id="how-it-works">
+  <p class="section-label">OUR 100% TRANSPARENT PROCESS</p>
+  <h2>Sell Your Home In 4 Simple Steps</h2>
+  <div class="steps-timeline">
+    <div class="step active">
+      <div class="step-num">1</div>
+      <div class="step-card" style="flex:1">
+        <h3>Submit The Form</h3>
+        <p>Click it. Fill it. It takes less time than taking a sh*t.</p>
+      </div>
+    </div>
+    <div class="step active">
+      <div class="step-num">2</div>
+      <div class="step-card" style="flex:1">
+        <h3>We'll Contact You</h3>
+        <p>Tyler or Riley (maybe both) will contact you to have a No-BS conversation about your situation and schedule a time to walk the house.</p>
+      </div>
+    </div>
+    <div class="step active">
+      <div class="step-num">3</div>
+      <div class="step-card" style="flex:1">
+        <h3>Walkthrough</h3>
+        <p>We meet face-to-face. Shake hands. You show us the casa. (laugh.. hopefully) See what the house needs. Learn more about you.</p>
+      </div>
+    </div>
+    <div class="step active">
+      <div class="step-num">4</div>
+      <div class="step-card" style="flex:1">
+        <h3>Offer</h3>
+        <p>You'll have a cash offer in your hands within 24-48 hours. Did we mention it's cash?</p>
+      </div>
+    </div>
+  </div>
+  <div class="steps-cta">
+    <button class="btn-gold" style="padding:16px 32px;font-size:16px;" onclick="openOfferForm()">Get My Cash Offer →</button>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features-section">
+  <p class="section-label">WHY HOMEOWNERS CHOOSE GOLDROCK</p>
+  <h2>The Easier Way to Sell</h2>
+  <p class="subtitle"><span style="background-color:var(--gold);color:#000;padding:2px 6px;border-radius:3px;">Skip the traditional listing headaches.</span> No showings, no repairs, no months of waiting.</p>
+  <div class="features-grid">
+    <div class="feature">
+      <div class="feature-icon">⚡</div>
+      <h3>Fast Closing</h3>
+      <p>Close in as little as 7 days — no waiting months for the right buyer.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">💲</div>
+      <h3>No Commissions</h3>
+      <p>Zero agent fees. Zero commissions. You keep more of your money.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🔧</div>
+      <h3>No Repairs Needed</h3>
+      <p>We buy your home as-is. Don't spend a dime fixing it up.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🏠</div>
+      <h3>Any Condition</h3>
+      <p>Inherited property, damaged home, or facing foreclosure — we buy it all.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📅</div>
+      <h3>You Choose the Date</h3>
+      <p>Pick a closing date that fits your life. We work around your schedule.</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">📦</div>
+      <h3>We Help You Move</h3>
+      <p>We don't just buy your home — we help make your move as smooth as possible so you can start your next chapter stress-free.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STATS + ABOUT -->
+<section class="stats-section">
+  <div class="stats-row">
+    <div>
+      <div class="stat-val" data-target="100" data-suffix="+">0+</div>
+      <div class="stat-label">Homeowners Served</div>
+    </div>
+    <div>
+      <div class="stat-val" data-target="20" data-prefix="$" data-suffix="M+" style="color:#2d7a3a;">$0M+</div>
+      <div class="stat-label">Paid to Colorado Homeowners</div>
+    </div>
+    <div>
+      <div class="stat-val" data-target="8" data-suffix="+">0+</div>
+      <div class="stat-label">Years of Experience</div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON SECTION -->
+<section style="background: var(--white); padding: 80px 48px;">
+  <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+    <p class="section-label">THE HONEST TRUTH</p>
+    <h2 style="font-size: clamp(32px, 5vw, 52px); font-weight: 800; letter-spacing:-1px; margin-bottom: 16px;">GoldRock vs. The Other Guys</h2>
+    <p style="color:var(--text-muted); font-size:16px; max-width:640px; margin: 0 auto 56px;">Not all cash buyers are the same. Some are honest, fair, and actually have the cash. Others... aren't. Here's what you need to know before you sign anything.</p>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; text-align:left;">
+
+      <!-- Competition Exposé Column -->
+      <div style="border:1.5px solid var(--border); border-radius:16px; overflow:hidden;">
+        <div style="background:#1a1a1a; padding:24px 32px;">
+          <p style="color:#999; font-size:12px; font-weight:600; letter-spacing:2px; margin-bottom:8px;">THE OTHER GUYS</p>
+          <h3 style="color:white; font-size:22px; font-weight:800; margin:0;">What to Watch Out For</h3>
+        </div>
+        <div style="padding:32px; background:white;">
+          <div style="display:flex; flex-direction:column; gap:20px;">
+
+            <div style="display:flex; gap:14px; align-items:flex-start;">
+              <span style="color:#cc4444; font-size:18px; flex-shrink:0;">⚠</span>
+              <div>
+                <p style="font-weight:700; font-size:15px; margin-bottom:4px;">They Hand You a Contract They Wrote Themselves</p>
+                <p style="font-size:14px; color:var(--text-muted); line-height:1.6;">Most cash buyers in Colorado are NOT using <strong>Colorado Real Estate Commission approved contracts</strong>. They write their own — filled with vague language, missing closing dates, and no real earnest money deadlines. That contract protects <strong>THEM</strong>, not you. If something goes sideways, you have almost zero legal recourse. Read the fine print. Or better yet, ask them who approved it.</p>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:14px; align-items:flex-start;">
+              <span style="color:#cc4444; font-size:18px; flex-shrink:0;">⚠</span>
+              <div>
+                <p style="font-weight:700; font-size:15px; margin-bottom:4px;">The "Too Good to Be True" Offer — Because It Is</p>
+                <p style="font-size:14px; color:var(--text-muted); line-height:1.6;">They walk in, look at your home, and throw out a number that makes your jaw drop. <strong>$50,000 over what anyone else offered.</strong> You think you found a unicorn. You didn't. That inflated offer is bait — designed to get you under contract and get your guard down. Once you're locked in, the real game starts.</p>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:14px; align-items:flex-start;">
+              <span style="color:#cc4444; font-size:18px; flex-shrink:0;">⚠</span>
+              <div>
+                <p style="font-weight:700; font-size:15px; margin-bottom:4px;">The Inspection Period Is Their Escape Hatch — Not Yours</p>
+                <p style="font-size:14px; color:var(--text-muted); line-height:1.6;">Here's the truth nobody tells you: <strong>a real investor doesn't need an inspection period.</strong> If someone is buying your home with cash, as-is, they've already done their homework before making the offer. An inspection period in a cash offer is a <strong style="color:#cc2222;">🚩 red flag</strong> — it means they're not a real investor. They're a wholesaler, a middleman, or someone who doesn't actually have the money and is using your contract as a fishing pole. Walk away.</p>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:14px; align-items:flex-start;">
+              <span style="color:#cc4444; font-size:18px; flex-shrink:0;">⚠</span>
+              <div>
+                <p style="font-weight:700; font-size:15px; margin-bottom:4px;">They Tell You Everything You Want to Hear</p>
+                <p style="font-size:14px; color:var(--text-muted); line-height:1.6;">No repairs. Fast close. Top dollar. Smooth process. They say all the right things on the phone — because they've said them a thousand times before. What they don't tell you is that none of it is in the contract. <strong>Verbal promises mean nothing in real estate.</strong> If it's not written down and legally binding, it doesn't exist.</p>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:14px; align-items:flex-start;">
+              <span style="color:#cc4444; font-size:18px; flex-shrink:0;">⚠</span>
+              <div>
+                <p style="font-weight:700; font-size:15px; margin-bottom:4px;">No Closing Date Means No Commitment — Just Control Over You</p>
+                <p style="font-size:14px; color:var(--text-muted); line-height:1.6;"><strong>Their contracts conveniently leave the closing date open-ended or undefined.</strong> That's not an oversight — it's leverage. It lets them drag the deal out for weeks or months while they line up financing, find another buyer, or wait for a better opportunity. You're stuck. Can't accept other offers. Can't move forward. Just waiting on someone who made you a promise they were never legally required to keep.</p>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:14px; align-items:flex-start;">
+              <span style="color:#cc4444; font-size:18px; flex-shrink:0;">⚠</span>
+              <div>
+                <p style="font-weight:700; font-size:15px; margin-bottom:4px;">Earnest Money That Disappears Into Thin Air</p>
+                <p style="font-size:14px; color:var(--text-muted); line-height:1.6;">In a legitimate real estate transaction, earnest money is held by a neutral third party — a title company or attorney — and has clear release conditions. <strong>Shady cash buyers often put in minimal earnest money, hold it themselves, or write contracts where they can get it back for almost any reason.</strong> If they walk, you get nothing. If you walk, good luck.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- GoldRock Cash Sale Column -->
+      <div style="border:2px solid var(--gold); border-radius:16px; overflow:hidden; box-shadow: 0 8px 40px rgba(212,168,50,0.15);">
+        <div style="background:var(--gold); padding:24px 32px;">
+          <p style="color:rgba(0,0,0,0.6); font-size:12px; font-weight:600; letter-spacing:2px; margin-bottom:8px;">GOLDROCK CASH SALE</p>
+          <h3 style="color:#000; font-size:22px; font-weight:800; margin:0;">The GoldRock Way</h3>
+        </div>
+        <div style="padding:32px; background:white;">
+          <div style="display:flex; flex-direction:column; gap:20px;">
+
+            <div style="display:flex; gap:14px; align-items:flex-start;">
+              <span style="color:#2d7a3a; font-size:18px; flex-shrink:0;">✓</span>
+              <div>
+                <p style="font-weight:700; font-size:15px; margin-bottom:4px;">We Use <strong>Colorado Real Estate Commission Approved Contracts. Period.</strong></p>
+                <p style="font-size:14px; color:var(--text-muted); line-height:1.6;">Every GoldRock transaction is executed on a state-approved contract — <strong>the same contract used by licensed Colorado real estate agents and attorneys.</strong> No self-written loopholes. No vague language designed to trap you. You can hand it to your attorney, your family member, or your neighbor who "knows a little about real estate" — it'll hold up. Because it's built to protect both parties, not just us.</p>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:14px; align-items:flex-start;">
+              <span style="color:#2d7a3a; font-size:18px; flex-shrink:0;">✓</span>
+              <div>
+                <p style="font-weight:700; font-size:15px; margin-bottom:4px;">Our Offer Is Real. What We Say Is What We Pay.</p>
+                <p style="font-size:14px; color:var(--text-muted); line-height:1.6;">We don't throw out fantasy numbers to get you under contract. We do our homework before we ever walk through your door — so when we make an offer, it's a <strong>REAL</strong> offer backed by <strong>REAL</strong> cash. No bait. No switch. No jaw-dropping number followed by a slow, painful grind back to reality. The number you hear on day one is the number you close on.</p>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:14px; align-items:flex-start;">
+              <span style="color:#2d7a3a; font-size:18px; flex-shrink:0;">✓</span>
+              <div>
+                <p style="font-weight:700; font-size:15px; margin-bottom:4px;">No Inspection Period. Because We Don't Need One.</p>
+                <p style="font-size:14px; color:var(--text-muted); line-height:1.6;">We are real investors with real cash. We walk the property, we assess it ourselves, and we make a decision — no inspection contingency, no escape hatch, no way out hiding in the fine print. <strong>When we say we're buying your home, we mean it.</strong> That's what separates actual investors from people playing dress-up with a clipboard and a contract they printed off the internet.</p>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:14px; align-items:flex-start;">
+              <span style="color:#2d7a3a; font-size:18px; flex-shrink:0;">✓</span>
+              <div>
+                <p style="font-weight:700; font-size:15px; margin-bottom:4px;">A Real Closing Date. In Writing. That We Actually Honor.</p>
+                <p style="font-size:14px; color:var(--text-muted); line-height:1.6;">Our contracts have a defined closing date — not "to be determined," not "within a reasonable timeframe," not language so vague a lawyer would laugh. A real date. Written down. And we show up. We already have the cash. We just need the date.</p>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:14px; align-items:flex-start;">
+              <span style="color:#2d7a3a; font-size:18px; flex-shrink:0;">✓</span>
+              <div>
+                <p style="font-weight:700; font-size:15px; margin-bottom:4px;">Everything We Promise Is In the Contract. All of It.</p>
+                <p style="font-size:14px; color:var(--text-muted); line-height:1.6;">Tyler and Riley don't make promises over the phone that disappear by the time you're signing. What we tell you on day one is what's in the contract on day two. No surprises. No "oh we forgot to mention." No fine print that contradicts what we said face to face. <strong>If it's not in writing, we don't say it.</strong> If we say it, it's in writing.</p>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:14px; align-items:flex-start;">
+              <span style="color:#2d7a3a; font-size:18px; flex-shrink:0;">✓</span>
+              <div>
+                <p style="font-weight:700; font-size:15px; margin-bottom:4px;">Earnest Money Held by a Licensed Title Company. Always.</p>
+                <p style="font-size:14px; color:var(--text-muted); line-height:1.6;">We don't hold your earnest money ourselves — <strong>EVER.</strong> It goes straight to a licensed Colorado title company, held in escrow under clear, defined conditions that protect you as much as they protect us. You know exactly what happens to it, when it releases, and under what circumstances. No mystery. No "trust us." Just a clean, transparent transaction from start to finish.</p>
+              </div>
+            </div>
+
+            <div style="display:flex; gap:14px; align-items:flex-start;">
+              <span style="color:#2d7a3a; font-size:18px; flex-shrink:0;">✓</span>
+              <div>
+                <p style="font-weight:700; font-size:15px; margin-bottom:4px;">We're Local. We're Accountable. We Live Here Too.</p>
+                <p style="font-size:14px; color:var(--text-muted); line-height:1.6;"><strong>GoldRock isn't a faceless out-of-state operation hiding behind a website and a Google Voice number.</strong> Tyler and Riley are Colorado locals — they live here, invest here, and have their reputation on the line with every single deal. If we screw you over, you know where to find us. That accountability isn't a liability. It's our greatest asset.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="margin-top:48px; background:var(--bg); border-radius:14px; padding:32px; text-align:center;">
+      <div style="font-size:17px; color:var(--text); line-height:2.2; max-width:700px; margin:0 auto 24px; text-align:center;">
+        <p style="margin-bottom:16px;">We didn't build GoldRock to compete with the other guys.</p>
+        <p style="margin-bottom:16px;">We built it because the other guys were failing Colorado homeowners.</p>
+        <p style="margin-bottom:8px;">Shady contracts.</p>
+        <p style="margin-bottom:8px;">Empty promises.</p>
+        <p style="margin-bottom:16px;">Offers that evaporate the second you need them most.</p>
+        <p style="margin-bottom:16px;">At the end of the day it comes down to one question…</p>
+        <p style="margin-bottom:8px;">Who do you trust with one of the biggest transactions of your life…?</p>
+        <p style="margin-bottom:8px;">Someone hiding behind a self-written contract…?</p>
+        <p style="margin-bottom:16px;">A too-good-to-be-true offer…?</p>
+        <p style="margin-bottom:8px;">Or…</p>
+        <p style="margin-bottom:8px; font-weight:800; font-size:20px;">Tyler and Riley.</p>
+        <p style="margin-bottom:8px;">Two local Coloradans.</p>
+        <p style="margin-bottom:8px;">With their name, reputation, and cash on the line.</p>
+        <p style="margin-bottom:24px; font-weight:800; letter-spacing:2px;">Every. Single. Time.</p>
+        <p style="margin-bottom:8px;">One conversation and you'll know exactly where you stand.</p>
+        <p style="font-weight:700;"><strong>Just a straightforward transaction every time.</strong></p>
+      </div>
+      <button class="btn-gold" style="padding:16px 36px; font-size:16px;" onclick="openOfferForm()">Get My Cash Offer →</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHO WE HELP SECTION -->
+<section style="background: var(--bg); padding: 80px 48px;">
+  <div style="max-width: 1000px; margin: 0 auto; text-align: center;">
+    <p class="section-label">WE'VE SEEN IT ALL</p>
+    <h2 style="font-size: clamp(32px, 5vw, 52px); font-weight: 800; letter-spacing:-1px; margin-bottom: 16px;">Every Situation. Every Condition. Every Challenge.</h2>
+    <p style="color:var(--text-muted); font-size:16px; max-width:640px; margin: 0 auto 56px;">There's no situation too messy, no home too far gone, and no deadline too close. If you need to sell your Colorado home — we've got you.</p>
+
+    <div style="display:grid; grid-template-columns: repeat(3,1fr); gap:24px; text-align:left; margin-bottom:48px; align-items:start;">
+
+      <!-- All Reasons -->
+      <div style="background:white; border:2px solid var(--gold); border-radius:14px; overflow:hidden;">
+        <div style="padding:24px 28px; border-bottom:1px solid var(--border); background:var(--bg); height:88px; display:flex; flex-direction:column; justify-content:center; box-sizing:border-box;">
+          <h3 style="color:var(--text); font-size:20px; font-weight:800; margin:0;">All Reasons</h3>
+          <p style="color:var(--text-muted); font-size:13px; margin-top:6px;">Life happens. We buy regardless of the reason.</p>
+        </div>
+        <div>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Pre-Foreclosure</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Facing foreclosure or already in it? We move fast so you don't lose everything.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Bankruptcy</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Chapter 7 or 13 — we work with your situation and can often close before it gets worse.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Divorce & Separation</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">One of the most common reasons we buy. No drama, no delays, just a clean exit for both parties.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Inherited Property</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Don't want to deal with repairs, tenants, or a property hours away? We handle it.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Probate</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Navigating the probate process while managing a property is overwhelming. We simplify it — fast and respectfully.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Job Relocation</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Moving for work and need to sell fast? We close on your timeline — even in days.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Medical Issues & Bills</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">When health takes priority, we make the financial side as painless as possible.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Downsizing</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Ready to simplify? We make it easy to move on without months of prep.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Retirement Transition</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Time to enjoy life. Let us handle the home so you can focus on what's next.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Tired Landlord</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Done with tenants, repairs, and the headache? We buy rental properties as-is.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Bad Tenants & Eviction</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Occupied, problem tenants, mid-eviction — we've bought them all.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Tax Delinquency & Liens</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Back taxes, HOA liens, judgments — we navigate these and still close.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Out-of-State Owner</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Managing a Colorado property from another state is a nightmare. Let us take it off your hands.</div></details>
+        </div>
+      </div>
+
+      <!-- Any Condition -->
+      <div style="background:white; border:2px solid var(--gold); border-radius:14px; overflow:hidden;">
+        <div style="padding:24px 28px; border-bottom:1px solid var(--border); background:var(--bg); height:88px; display:flex; flex-direction:column; justify-content:center; box-sizing:border-box;">
+          <h3 style="color:var(--text); font-size:20px; font-weight:800; margin:0;">Any Condition</h3>
+          <p style="color:var(--text-muted); font-size:13px; margin-top:6px;">Don't spend a dollar before we close.</p>
+        </div>
+        <div>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Fire Damaged</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Partial or total fire damage — we assess it ourselves and make a real offer.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Water Damage</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Rot, structural damage from water — we've seen it all and we still buy.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Mold</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Mold doesn't scare us. You don't need to remediate a thing before we close.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Major Repairs Needed</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Roof, foundation, HVAC, sewer, electrical — we take it as-is. Every time.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Structural Problems</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Foundation cracks, settlement issues, structural failures — we buy those too.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Hoarder Houses</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">No judgment. No cleanup required. We handle everything after closing.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Vandalized Property</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Broken windows, stripped copper, graffiti — doesn't matter. We buy it.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Vacant & Deteriorating</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Sitting empty and falling apart? We stop the bleeding fast.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Squatters</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">We've dealt with occupied properties in every shape and form.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Unpermitted Work</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Additions or remodels done without permits — not a dealbreaker for us.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Old Homes</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Original condition, hasn't been updated since 1970 — we buy it.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Hail Damage</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Colorado hail is brutal. We buy hail-damaged homes — roof, siding, windows and all.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Unfinished Construction</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Half-renovated and ran out of money or motivation? We take it from here.</div></details>
+        </div>
+      </div>
+
+      <!-- All Challenges -->
+      <div style="background:white; border:2px solid var(--gold); border-radius:14px; overflow:hidden;">
+        <div style="padding:24px 28px; border-bottom:1px solid var(--border); background:var(--bg); height:88px; display:flex; flex-direction:column; justify-content:center; box-sizing:border-box;">
+          <h3 style="color:var(--text); font-size:20px; font-weight:800; margin:0;">All Challenges</h3>
+          <p style="color:var(--text-muted); font-size:13px; margin-top:6px;">The harder it is, the more we can help.</p>
+        </div>
+        <div>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Auction Scheduled</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Days or weeks from losing it all? We can still help — but reach out now.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Code Violations</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Health and safety violations, city orders — we buy properties with open citations.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Title Issues</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Clouded title, missing heirs, easement disputes — we work through it.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> HOA Liens & Unpaid Dues</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">HOA blocking your sale? We navigate the liens and still close.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Past Due Mortgages</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Behind on payments with time running out? Speed is everything here.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Probate</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Navigating the probate process while managing a property is overwhelming. We make it simple and respectful.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Estate Sales</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Settling an estate and need to liquidate the property fast? We handle it with care and move on your timeline.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Failed Listing</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Listed, sat, expired, withdrawn — your home didn't sell on MLS. Ours will.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Price Reductions</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Kept lowering the price and still nothing? We'll give you a real number.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Divorce + Foreclosure Combo</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">One of the most stressful combinations there is. We've helped many families through it.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Insurance Dropped</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">When the property becomes uninsurable — sell before it becomes a bigger problem.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Portfolio Liquidation</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">Selling multiple properties fast? We handle volume and close efficiently.</div></details>
+          <details style="border-bottom:1px solid var(--border);"><summary style="padding:14px 24px; color:var(--text); font-size:14px; cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px;"><span style="color:var(--gold);">›</span> Wage Garnishment Pressure</summary><div style="padding:0 24px 14px; color:var(--text-muted); font-size:13px; line-height:1.6;">When every dollar counts and you need liquidity fast — selling your home could be the fastest way out.</div></details>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="color:var(--text-muted); font-size:16px; margin-bottom:24px;">Don't see your situation? Reach out anyway. If there's a way to help you, GoldRock will find it.</p>
+    <button class="btn-gold" style="padding:16px 36px; font-size:16px;" onclick="openOfferForm()">Get My Cash Offer →</button>
+  </div>
+</section>
+
+<!-- SERVICE AREAS SECTION -->
+<section style="background:var(--white); padding:80px 48px;">
+  <div style="max-width:1000px; margin:0 auto; text-align:center;">
+    <p class="section-label">WHERE WE BUY</p>
+    <h2 style="font-size:clamp(32px,5vw,52px); font-weight:800; letter-spacing:-1px; margin-bottom:16px;">We Buy Homes Across the Front Range</h2>
+    <p style="color:var(--text-muted); font-size:16px; max-width:640px; margin:0 auto 56px;">From Denver to Colorado Springs, Fort Collins to Greeley — if you're in Colorado and need to sell, there's a good chance we're already buying in your neighborhood. Find your area below.</p>
+
+    <style>
+      .county-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; text-align:left; }
+      .county-card { background:white; border:2px solid var(--gold); border-radius:14px; overflow:hidden; text-align:left; }
+      .county-header { padding:20px 28px; background:var(--bg); border-bottom:1px solid var(--border); }
+      .county-header h3 { font-size:18px; font-weight:800; margin:0; color:var(--text); }
+      .county-header p { color:var(--text-muted); font-size:13px; margin-top:4px; }
+      .county-preview { padding:12px 24px; font-size:12px; color:var(--text-muted); line-height:2; border-bottom:1px solid var(--border); }
+      .county-preview span::after { content:" ❖ "; color:var(--gold); font-size:9px; font-weight:900; }
+      .county-preview span:last-child::after { content:""; }
+      .city-details { border-bottom:1px solid var(--border); }
+      .city-details:last-child { border-bottom:none; }
+      .city-details summary { padding:14px 24px; font-weight:700; font-size:14px; color:var(--text); cursor:pointer; list-style:none; display:flex; align-items:center; gap:10px; user-select:none; -webkit-tap-highlight-color:transparent; transition:background 0.15s; }
+      .city-details summary:hover { background:#fafaf8; }
+      .city-details summary::before { content:"●"; color:var(--gold); font-size:10px; flex-shrink:0; }
+      .city-details[open] summary { color:var(--gold); background:#fafaf8; }
+      .city-details[open] summary::before { content:"●"; }
+      .city-hoods { padding:4px 24px 16px 44px; font-size:13px; color:var(--text-muted); line-height:2.4; }
+      .city-hoods span { display:inline; }
+      .city-hoods span::after { content:" ❖ "; color:var(--gold); font-size:10px; font-weight:900; }
+      .city-hoods span:last-child::after { content:""; }
+      @media(max-width:768px) { .county-grid { grid-template-columns:1fr; } }
+    </style>
+
+    <div class="county-grid">
+
+    <!-- DENVER COUNTY -->
+    <div class="county-card">
+      <div class="county-header">
+        <h3>🏙 Denver County</h3>
+        <p>78 official neighborhoods — we buy in all of them.</p>
+      </div>
+      <details class="city-details"><summary>Baker · Broadway · Platt Park · Overland</summary>
+        <div class="city-hoods"><span>Baker</span><span>Platt Park</span><span>South Broadway</span><span>Overland</span><span>Rosedale</span></div>
+      </details>
+      <details class="city-details"><summary>Capitol Hill · Uptown · Cheesman · Congress Park</summary>
+        <div class="city-hoods"><span>Capitol Hill</span><span>North Capitol Hill</span><span>Uptown</span><span>Cheesman Park</span><span>Congress Park</span><span>Country Club</span></div>
+      </details>
+      <details class="city-details"><summary>Cherry Creek · Hilltop · Belcaro · Cory-Merrill</summary>
+        <div class="city-hoods"><span>Cherry Creek</span><span>Hilltop</span><span>Belcaro</span><span>Cory-Merrill</span><span>Goldsmith</span><span>Virginia Village</span></div>
+      </details>
+      <details class="city-details"><summary>Highland · LoHi · Jefferson Park · Sunnyside</summary>
+        <div class="city-hoods"><span>Highland</span><span>West Highland</span><span>LoHi</span><span>Jefferson Park</span><span>Sunnyside</span><span>Chaffee Park</span></div>
+      </details>
+      <details class="city-details"><summary>LoDo · RiNo · Five Points · Union Station</summary>
+        <div class="city-hoods"><span>LoDo</span><span>RiNo</span><span>Five Points</span><span>Cole</span><span>Globeville</span><span>Elyria-Swansea</span><span>Union Station</span><span>Golden Triangle</span></div>
+      </details>
+      <details class="city-details"><summary>Washington Park · University · Hale · Montclair</summary>
+        <div class="city-hoods"><span>Washington Park</span><span>Washington Park West</span><span>University</span><span>University Hills</span><span>University Park</span><span>Hale</span><span>Montclair</span></div>
+      </details>
+      <details class="city-details"><summary>Sloan Lake · West Colfax · Park Hill · Stapleton</summary>
+        <div class="city-hoods"><span>Sloan Lake</span><span>West Colfax</span><span>Barnum</span><span>Barnum West</span><span>Valverde</span><span>North Park Hill</span><span>South Park Hill</span><span>Northeast Park Hill</span><span>Stapleton (Central Park)</span><span>Montbello</span><span>Gateway / Green Valley Ranch</span><span>Skyland</span><span>Bear Valley</span><span>Harvey Park</span><span>Harvey Park South</span><span>Fort Logan</span><span>Mar Lee</span><span>Marston</span><span>Ruby Hill</span><span>College View / South Platte</span><span>City Park</span><span>City Park West</span><span>Civic Center</span><span>Regis</span><span>Berkeley</span><span>Clayton</span><span>Auraria</span><span>Sun Valley</span><span>Indian Creek</span><span>Kennedy</span><span>Lincoln Park</span><span>Lowry Field</span><span>Swansea</span><span>Westwood</span><span>Whittier</span><span>Windsor</span><span>DIA</span><span>East Colfax</span></div>
+      </details>
+    </div>
+
+    <!-- ARAPAHOE COUNTY -->
+    <div class="county-card">
+      <div class="county-header">
+        <h3>🏘 Arapahoe County</h3>
+        <p>Aurora, Englewood, Centennial & more.</p>
+      </div>
+      <details class="city-details"><summary>Aurora</summary>
+        <div class="city-hoods"><span>Tollgate</span><span>Meadowood</span><span>Waterstone</span><span>Saddle Rock</span><span>Murphy Creek</span><span>Tallyn's Reach</span><span>Copperleaf</span><span>Beacon Point</span><span>The Farm</span><span>Sorrel Ranch</span><span>Wheatlands</span><span>Centretech</span><span>Fitzsimons</span><span>Mission Viejo</span><span>Heather Ridge</span><span>Hutchinson Heights</span><span>Seven Hills</span><span>Sable Landing</span><span>High Prairie</span><span>Stone Canyon</span><span>Piney Creek</span><span>Antelope Heights</span></div>
+      </details>
+      <details class="city-details"><summary>Englewood</summary>
+        <div class="city-hoods"><span>Old Englewood</span><span>Hampden Heights</span><span>Bates-Logan Park</span><span>Rotolo Park</span><span>Sheridan</span><span>Union Park</span><span>Centennial Park</span><span>South Broadway</span></div>
+      </details>
+      <details class="city-details"><summary>Centennial</summary>
+        <div class="city-hoods"><span>Willow Creek</span><span>Foxridge</span><span>Homestead in the Willows</span><span>Highlands Ranch</span><span>Ridgeview Hills</span><span>Cherry Knolls</span><span>Heritage Greens</span><span>Walnut Hills</span><span>Rolling Hills</span></div>
+      </details>
+      <details class="city-details"><summary>Littleton</summary>
+        <div class="city-hoods"><span>Littleton Village</span><span>South Suburban</span><span>Columbine Valley</span><span>Windermere</span><span>Ketring Park</span></div>
+      </details>
+      <details class="city-details"><summary>Sheridan</summary>
+        <div class="city-hoods"><span>Clarkson</span><span>Orchard Park</span><span>Landmark</span></div>
+      </details>
+      <details class="city-details"><summary>Cherry Hills Village</summary>
+        <div class="city-hoods"><span>Cherry Hills Farm</span><span>Cherry Hills Farms</span><span>Devonshire</span></div>
+      </details>
+      <details class="city-details"><summary>Greenwood Village</summary>
+        <div class="city-hoods"><span>Greenwood Village South</span><span>The Preserve</span><span>Cherry Creek Country Club</span></div>
+      </details>
+    </div>
+
+    <!-- JEFFERSON COUNTY -->
+    <div class="county-card">
+      <div class="county-header">
+        <h3>⛰ Jefferson County</h3>
+        <p>Lakewood, Arvada, Wheat Ridge, Golden & more.</p>
+      </div>
+      <details class="city-details"><summary>Lakewood</summary>
+        <div class="city-hoods"><span>Belmar</span><span>Solterra</span><span>Green Gables</span><span>Eiber</span><span>Kendrick Lake</span><span>Morse Park</span><span>Lochwood</span><span>Sun Valley</span><span>O'Kane Park</span><span>Glennon Heights</span><span>Daniels Park</span><span>Bear Creek</span><span>Westgate</span><span>Carmody</span><span>Creighton</span></div>
+      </details>
+      <details class="city-details"><summary>Arvada</summary>
+        <div class="city-hoods"><span>Olde Town</span><span>Westwoods</span><span>Ralston Valley</span><span>Meadows</span><span>Hidden Lake</span><span>Sierra Hills</span><span>Whisper Creek</span><span>Club Crest</span><span>Hunters Glen</span><span>Lake Arbor</span><span>Candelas</span><span>Sundown</span><span>Ponderosa</span></div>
+      </details>
+      <details class="city-details"><summary>Wheat Ridge</summary>
+        <div class="city-hoods"><span>Prospect Park</span><span>Bel Aire</span><span>Fruitdale</span></div>
+      </details>
+      <details class="city-details"><summary>Golden</summary>
+        <div class="city-hoods"><span>Clear Creek</span><span>Applewood</span><span>Mesa Meadows</span><span>Lookout Mountain</span></div>
+      </details>
+      <details class="city-details"><summary>Edgewater</summary>
+        <div class="city-hoods"><span>Mountain Shadow</span><span>Heritage Dells</span></div>
+      </details>
+      <details class="city-details"><summary>Morrison</summary>
+        <div class="city-hoods"><span>Genesee</span><span>Mount Falcon</span></div>
+      </details>
+    </div>
+
+    <!-- ADAMS COUNTY -->
+    <div class="county-card">
+      <div class="county-header">
+        <h3>🏗 Adams County</h3>
+        <p>Thornton, Westminster, Brighton, Commerce City & more.</p>
+      </div>
+      <details class="city-details"><summary>Thornton</summary>
+        <div class="city-hoods"><span>Hunters Glen</span><span>Eastlake</span><span>Heritage Todd Creek</span><span>Riverdale</span><span>Parkside</span><span>North Thornton</span><span>Cherrywood</span><span>Meadow Hills</span><span>Woodfield</span><span>Vintage Reserve</span><span>Prairie Lakes</span></div>
+      </details>
+      <details class="city-details"><summary>Westminster</summary>
+        <div class="city-hoods"><span>Legacy Ridge</span><span>The Hyland Hills</span><span>Orchard Farms</span><span>Shaw Heights</span><span>Sheridan Green</span><span>Bradburn Village</span><span>Cotton Creek</span><span>Countryside</span></div>
+      </details>
+      <details class="city-details"><summary>Brighton</summary>
+        <div class="city-hoods"><span>Brighton Crossing</span><span>Bromley Park</span><span>Prairie Center</span><span>Turnberry</span></div>
+      </details>
+      <details class="city-details"><summary>Commerce City</summary>
+        <div class="city-hoods"><span>Reunion</span><span>Todd Creek</span><span>River Run</span><span>Reunion Ridge</span><span>Baseline</span></div>
+      </details>
+      <details class="city-details"><summary>Federal Heights</summary>
+        <div class="city-hoods"><span>Federal Heights Estates</span><span>Sherrelwood</span></div>
+      </details>
+      <details class="city-details"><summary>Northglenn</summary>
+        <div class="city-hoods"><span>North Washington</span><span>Hillcrest</span><span>Northglenn Estates</span></div>
+      </details>
+    </div>
+
+    <!-- DOUGLAS COUNTY -->
+    <div class="county-card">
+      <div class="county-header">
+        <h3>🌲 Douglas County</h3>
+        <p>Castle Rock, Parker, Highlands Ranch & more.</p>
+      </div>
+      <details class="city-details"><summary>Castle Rock</summary>
+        <div class="city-hoods"><span>The Meadows</span><span>Crystal Valley Ranch</span><span>Cobblestone Ranch</span><span>Maher Ranch</span><span>Founders Village</span><span>Plum Creek</span><span>Terrain</span><span>Happy Canyon</span><span>Franktown</span><span>Metzler Ranch</span><span>Glover Point</span></div>
+      </details>
+      <details class="city-details"><summary>Parker</summary>
+        <div class="city-hoods"><span>Anthology</span><span>Clarke Farms</span><span>Stonegate</span><span>Canterbury</span><span>Sierra Ridge</span><span>Stroh Ranch</span><span>Villages of Parker</span><span>Tallgrass</span><span>Bradbury Ranch</span><span>Pine Bluffs</span><span>Cottonwood</span></div>
+      </details>
+      <details class="city-details"><summary>Highlands Ranch</summary>
+        <div class="city-hoods"><span>Backcountry</span><span>Firelight</span><span>Westridge</span><span>Northridge</span><span>Eastridge</span><span>Southridge</span></div>
+      </details>
+      <details class="city-details"><summary>Lone Tree</summary>
+        <div class="city-hoods"><span>Heritage Hills</span><span>RidgeGate</span><span>Sky Ridge</span></div>
+      </details>
+      <details class="city-details"><summary>Larkspur</summary>
+        <div class="city-hoods"><span>Wildcat Mountain</span><span>Perry Park</span></div>
+      </details>
+      <details class="city-details"><summary>Monument</summary>
+        <div class="city-hoods"><span>Forest Lakes</span><span>Jackson Creek</span><span>Promontory Pointe</span><span>Woodmoor</span></div>
+      </details>
+    </div>
+
+    <!-- BOULDER COUNTY -->
+    <div class="county-card">
+      <div class="county-header">
+        <h3>🎓 Boulder County</h3>
+        <p>Lafayette, Louisville, Erie, Broomfield & more.</p>
+      </div>
+      <details class="city-details"><summary>Lafayette</summary>
+        <div class="city-hoods"><span>Waneka Lake</span><span>Centaur Village</span><span>Coal Creek</span><span>Indian Peaks</span><span>Chandler</span></div>
+      </details>
+      <details class="city-details"><summary>Louisville</summary>
+        <div class="city-hoods"><span>Kenosha Heights</span><span>Rex Ranch</span><span>Steel Ranch</span><span>Arapahoe Ridge</span></div>
+      </details>
+      <details class="city-details"><summary>Erie</summary>
+        <div class="city-hoods"><span>Vista Ridge</span><span>Compass</span><span>Compass Village</span><span>Colliers Hill</span></div>
+      </details>
+      <details class="city-details"><summary>Broomfield</summary>
+        <div class="city-hoods"><span>Anthem</span><span>Broadlands</span><span>The Ponds</span><span>Brandywine</span><span>Miramonte</span><span>Arista</span><span>Lambertson Farms</span><span>Wildgrass</span><span>Aspen Creek</span><span>Westlake</span><span>Redleaf</span></div>
+      </details>
+      <details class="city-details"><summary>Longmont</summary>
+        <div class="city-hoods"><span>Hover Acres</span><span>Spring Valley</span><span>Prospect</span><span>Twin Peaks</span><span>Ute Creek</span><span>Sunset</span></div>
+      </details>
+      <details class="city-details"><summary>Niwot</summary>
+        <div class="city-hoods"><span>Quail Crossing</span><span>Winchester</span></div>
+      </details>
+      <details class="city-details"><summary>Lyons</summary>
+        <div class="city-hoods"><span>Creekside</span><span>Meadow Park</span></div>
+      </details>
+    </div>
+
+    <!-- EL PASO COUNTY -->
+    <div class="county-card">
+      <div class="county-header">
+        <h3>🦅 El Paso County</h3>
+        <p>Colorado Springs, Fountain, Pueblo West & surrounding areas.</p>
+      </div>
+      <details class="city-details"><summary>Colorado Springs — North</summary>
+        <div class="city-hoods"><span>Flying Horse</span><span>Briargate</span><span>Wolf Ranch</span><span>Pine Creek</span><span>Stetson Hills</span><span>Cordera</span><span>Forest Lakes</span><span>Northgate</span><span>Banning Lewis Ranch</span><span>Cathedral Pines</span><span>High Forest Ranch</span><span>Gleneagle</span><span>King's Deer</span><span>Sanctuary Pointe</span></div>
+      </details>
+      <details class="city-details"><summary>Colorado Springs — Central</summary>
+        <div class="city-hoods"><span>Old North End</span><span>Downtown</span><span>Ivywild</span><span>Shooks Run</span><span>Patty Jewett</span><span>Hillside</span><span>Knob Hill</span><span>Skyway</span><span>Broadmoor</span><span>Cheyenne Mountain</span><span>Gold Hill Mesa</span><span>Old Colorado City</span><span>Cedar Heights</span><span>Kissing Camels</span></div>
+      </details>
+      <details class="city-details"><summary>Colorado Springs — East & Southeast</summary>
+        <div class="city-hoods"><span>Powers</span><span>Cimarron Hills</span><span>Lorson Ranch</span><span>Claremont Ranch</span><span>Vista Grande</span><span>Meridian Ranch</span><span>Falcon</span><span>Peyton</span><span>Black Forest</span><span>Security-Widefield</span><span>Stratmoor Hills</span><span>Ellicott</span></div>
+      </details>
+      <details class="city-details"><summary>Fountain</summary>
+        <div class="city-hoods"><span>Fountain Valley Ranch</span><span>Mesa Ridge</span><span>Cross Creek</span><span>Widefield</span></div>
+      </details>
+      <details class="city-details"><summary>Manitou Springs</summary>
+        <div class="city-hoods"><span>Rock Creek Park</span><span>Cascade</span><span>Chipita Park</span></div>
+      </details>
+      <details class="city-details"><summary>Monument</summary>
+        <div class="city-hoods"><span>Forest Lakes</span><span>Jackson Creek</span><span>Promontory Pointe</span></div>
+      </details>
+      <details class="city-details"><summary>Palmer Lake</summary>
+        <div class="city-hoods"><span>Woodmoor</span><span>Happy Valley</span></div>
+      </details>
+    </div>
+
+    <!-- LARIMER COUNTY -->
+    <div class="county-card">
+      <div class="county-header">
+        <h3>🏔 Larimer County</h3>
+        <p>Fort Collins, Loveland, Windsor, Timnath & more.</p>
+      </div>
+      <details class="city-details"><summary>Fort Collins</summary>
+        <div class="city-hoods"><span>Old Town</span><span>Harmony</span><span>Fossil Lake Ranch</span><span>Provincetowne</span><span>Timberline</span><span>Spring Creek</span><span>Sunstone</span><span>Ridgewood Hills</span><span>Coventry</span><span>Rigden Farm</span><span>Harvest Park</span><span>Waterleaf</span><span>Ptarmigan</span><span>Registry Ridge</span><span>Westchase</span><span>Stoneridge</span><span>Huntington Hills</span><span>Bucking Horse</span></div>
+      </details>
+      <details class="city-details"><summary>Loveland</summary>
+        <div class="city-hoods"><span>City Center</span><span>Centerra</span><span>Alford Lake</span><span>The Lakes</span><span>Campion</span><span>Boyd Lake</span><span>Mariana Butte</span><span>Brookfield</span><span>The Reserve</span><span>Millennium</span><span>Lakeside</span><span>Eagle Brook Meadows</span></div>
+      </details>
+      <details class="city-details"><summary>Windsor</summary>
+        <div class="city-hoods"><span>Raindance</span><span>Highland Meadows</span><span>Windshire</span><span>Severance Shores</span></div>
+      </details>
+      <details class="city-details"><summary>Timnath</summary>
+        <div class="city-hoods"><span>Pelican Farms</span><span>Fossil Ridge</span></div>
+      </details>
+      <details class="city-details"><summary>Wellington</summary>
+        <div class="city-hoods"><span>Timber Ridge</span><span>Wellington Commons</span></div>
+      </details>
+      <details class="city-details"><summary>Berthoud</summary>
+        <div class="city-hoods"><span>Ptarmigan</span><span>Berthoud Heights</span></div>
+      </details>
+    </div>
+
+    <!-- WELD COUNTY -->
+    <div class="county-card">
+      <div class="county-header">
+        <h3>🌾 Weld County</h3>
+        <p>Greeley, Evans, Milliken, Johnstown & more.</p>
+      </div>
+      <details class="city-details"><summary>Greeley</summary>
+        <div class="city-hoods"><span>Downtown Greeley</span><span>Promontory</span><span>Sheep Draw</span><span>West Greeley</span><span>Eastside</span><span>Prairie Shadows</span><span>Poudre Valley</span><span>Fox Run</span><span>Highland Park</span><span>Sunrise Ridge</span><span>Aims</span><span>Creekside</span><span>Hillside</span><span>The Greens</span><span>Centennial Village</span><span>Westlake</span></div>
+      </details>
+      <details class="city-details"><summary>Evans</summary>
+        <div class="city-hoods"><span>River West</span><span>South Evans</span><span>Garden Park</span></div>
+      </details>
+      <details class="city-details"><summary>Garden City</summary>
+        <div class="city-hoods"><span>Hillside Estates</span></div>
+      </details>
+      <details class="city-details"><summary>LaSalle</summary>
+        <div class="city-hoods"><span>LaSalle Heights</span></div>
+      </details>
+      <details class="city-details"><summary>Kersey</summary>
+        <div class="city-hoods"><span>Kersey Village</span></div>
+      </details>
+      <details class="city-details"><summary>Johnstown</summary>
+        <div class="city-hoods"><span>Johnstown Farms</span><span>Thompson River Ranch</span></div>
+      </details>
+      <details class="city-details"><summary>Milliken</summary>
+        <div class="city-hoods"><span>Stroh Farm</span><span>Milliken Estates</span><span>Centennial Park</span></div>
+      </details>
+      <details class="city-details"><summary>Platteville</summary>
+        <div class="city-hoods"><span>Heritage Todd Creek</span><span>Settlers Village</span></div>
+      </details>
+      <details class="city-details"><summary>Fort Lupton</summary>
+        <div class="city-hoods"><span>Coyote Ridge</span></div>
+      </details>
+      <details class="city-details"><summary>Erie</summary>
+        <div class="city-hoods"><span>Arapahoe Ridge</span><span>Vista Ridge</span><span>Colliers Hill</span></div>
+      </details>
+      <details class="city-details"><summary>Firestone</summary>
+        <div class="city-hoods"><span>Barefoot Lakes</span><span>Wyndham Hill</span></div>
+      </details>
+      <details class="city-details"><summary>Frederick</summary>
+        <div class="city-hoods"><span>Carbon Valley</span><span>Buffalo Highlands</span></div>
+      </details>
+      <details class="city-details"><summary>Dacono</summary>
+        <div class="city-hoods"><span>Copper Creek</span><span>Sundance</span></div>
+      </details>
+      <details class="city-details"><summary>Mead</summary>
+        <div class="city-hoods"><span>Mead Village</span><span>Lookout</span></div>
+      </details>
+    </div>
+
+    </div><!-- end county-grid -->
+
+    <div style="margin-top:48px; background:var(--bg); border-radius:14px; padding:32px; text-align:center; border:2px solid var(--gold);">
+      <p style="font-size:17px; color:var(--text); line-height:1.7; max-width:640px; margin:0 auto 24px;">Don't see your neighborhood listed? We're still likely buying there. Submit the form and Tyler or Riley will let you know within hours.</p>
+      <button class="btn-gold" style="padding:16px 36px; font-size:16px;" onclick="openOfferForm()">Check If We Buy In Your Area →</button>
+    </div>
+
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews-section">
+  <div style="text-align:center; padding: 80px 48px;">
+    <p class="section-label">REAL PEOPLE. REAL RESULTS.</p>
+    <h2 style="font-size: clamp(32px, 5vw, 52px); font-weight: 800; letter-spacing:-1px; margin-bottom: 16px;">Don't Take Our Word For It.</h2>
+    <p style="color:var(--text-muted); font-size:16px; max-width:500px; margin: 0 auto 56px;">We could sit here and tell you how great we are. But honestly, Tyler and Riley's track record speaks louder than anything we'd write about ourselves.</p>
+
+    <div style="display:grid; grid-template-columns: repeat(3,1fr); gap:24px; max-width:1000px; margin:0 auto;">
+
+      <div style="background:white; border:1.5px solid var(--border); border-radius:14px; padding:32px; text-align:left; display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div style="color:var(--gold); font-size:20px; letter-spacing:3px; margin-bottom:20px;">★★★★★</div>
+          <p style="font-style:italic; font-size:15px; color:var(--text); line-height:1.7; margin-bottom:24px;">"I needed to sell fast after a job relocation and they delivered. Got a fair offer within a day, closed in under two weeks. Couldn't be easier."</p>
+        </div>
+        <div style="border-top:1px solid var(--border); padding-top:20px; display:flex; align-items:center; gap:14px;">
+          <div style="width:44px; height:44px; border-radius:50%; background:#1a1a1a; color:white; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; flex-shrink:0;">SM</div>
+          <div>
+            <div style="font-weight:700; font-size:15px;">Sarah M.</div>
+            <div style="font-size:13px; color:var(--text-muted);">Colorado Springs, CO</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:white; border:1.5px solid var(--border); border-radius:14px; padding:32px; text-align:left; display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div style="color:var(--gold); font-size:20px; letter-spacing:3px; margin-bottom:20px;">★★★★★</div>
+          <p style="font-style:italic; font-size:15px; color:var(--text); line-height:1.7; margin-bottom:24px;">"No games, no surprises. The offer was fair and the process was crystal clear from start to finish. I saved thousands in commissions and repairs."</p>
+        </div>
+        <div style="border-top:1px solid var(--border); padding-top:20px; display:flex; align-items:center; gap:14px;">
+          <div style="width:44px; height:44px; border-radius:50%; background:#1a1a1a; color:white; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; flex-shrink:0;">LR</div>
+          <div>
+            <div style="font-weight:700; font-size:15px;">Linda R.</div>
+            <div style="font-size:13px; color:var(--text-muted);">Denver, CO</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:white; border:1.5px solid var(--border); border-radius:14px; padding:32px; text-align:left; display:flex; flex-direction:column; justify-content:space-between;">
+        <div>
+          <div style="color:var(--gold); font-size:20px; letter-spacing:3px; margin-bottom:20px;">★★★★★</div>
+          <p style="font-style:italic; font-size:15px; color:var(--text); line-height:1.7; margin-bottom:24px;">"Was facing foreclosure and didn't know what to do. They stepped in, made an offer fast, and helped me close before anything hit my credit. Lifesaver."</p>
+        </div>
+        <div style="border-top:1px solid var(--border); padding-top:20px; display:flex; align-items:center; gap:14px;">
+          <div style="width:44px; height:44px; border-radius:50%; background:#1a1a1a; color:white; display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; flex-shrink:0;">DK</div>
+          <div>
+            <div style="font-weight:700; font-size:15px;">David K.</div>
+            <div style="font-size:13px; color:var(--text-muted);">Aurora, CO</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <p class="section-label">YOU'VE GOT QUESTIONS, WE HAVE ANSWERS!</p>
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-question">How does GoldRock's cash home buying process work in Colorado? <span class="faq-chevron">⌄</span></div>
+      <div class="faq-answer">Pretty simple, actually. You fill out the form, Tyler or Riley calls you, we schedule a walkthrough, and within 24-48 hours of seeing the property we put a real cash offer in your hands. No listings. No showings. Just a straight conversation, a fair number, and a closing date you actually control. That's it.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">How fast can GoldRock close on my Colorado home? <span class="faq-chevron">⌄</span></div>
+      <div class="faq-answer">As fast as 7 days — or as slow as you need. We work on your timeline, not ours. We have the cash. When you're ready, we close. It's genuinely that simple.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Will GoldRock buy my home as-is, even if it needs repairs? <span class="faq-chevron">⌄</span></div>
+      <div class="faq-answer">Yes. And we mean it. Fire damage, foundation issues, roof falling in, mold, hoarder situation, hasn't been cleaned in years — we don't care. We buy the home exactly as it sits. You don't spend a dollar, make a single phone call to a contractor, or lift a finger before closing. Just leave what you don't want and walk out.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Are there any fees, commissions, or hidden costs? <span class="faq-chevron">⌄</span></div>
+      <div class="faq-answer">None. Zero. We don't charge commissions. No hidden fees or service costs. We're not going to sneak closing costs into the fine print either.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">How is GoldRock's cash offer calculated? <span class="faq-chevron">⌄</span></div>
+      <div class="faq-answer">We look at real Colorado market data, recent comparable sales in your specific neighborhood, and the actual condition of your home. We also factor in rehab and repair costs, holding costs while we own the property, market fluctuations, commissions we pay on the sell side, buyer concessions when we sell, and the risk we're taking on buying as-is. We're not throwing out a fantasy number to get you under contract. We do our homework before we walk through the door — so when we make an offer, it's a number we stand behind.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">What types of situations does GoldRock help Colorado homeowners with? <span class="faq-chevron">⌄</span></div>
+      <div class="faq-answer">We help Colorado homeowners in virtually every difficult situation — here's what we specialize in:<br><br>
+Pre-foreclosure, behind on mortgage payments, forbearance ending, loan default, tax delinquency or tax liens, HOA liens, bankruptcy (Chapter 7 or 13), judgments or creditor liens, wage garnishment pressure, and hard money loans coming due.<br><br>
+Divorce or separation, inherited property (probate), death in the family, guardianship or conservatorship situations, code violations, and city citations.<br><br>
+Major repairs needed (roof, foundation, HVAC, sewer), fire damage, flood or water damage, mold, structural problems, vacant and deteriorating property, hoarder houses, vandalized properties, and squatters.<br><br>
+Job relocation, downsizing, upsizing, retirement transition, health issues or medical bills, moving into assisted living, bad tenants or eviction situations.<br><br>
+Major unexpected repairs, vacant properties, landlord fatigue, partnership disputes, out-of-state owner issues, and portfolio liquidation.<br><br>
+House sitting on market with no offers, expired or withdrawn listings, repeated price reductions, needing to sell before buying another home, and closing deadline crunches.<br><br>
+Facing foreclosure auction within days or weeks, abandoning property, severe financial hardship, property becoming a liability (insurance dropped or property deemed unsafe), and the very common divorce plus foreclosure combination.<br><br>
+If your situation isn't listed here — reach out anyway. If there's a way to help you, GoldRock will find it.
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Is there any obligation when I request a cash offer from GoldRock? <span class="faq-chevron">⌄</span></div>
+      <div class="faq-answer">Zero obligation. Requesting an offer is free and commits you to absolutely nothing.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">Which Colorado cities and counties does GoldRock buy homes in? <span class="faq-chevron">⌄</span></div>
+      <div class="faq-answer">If you're wondering whether we buy in your area — the answer is yes. We purchase homes throughout the major Front Range markets, including the entire Denver Metro, Colorado Springs Metro, Fort Collins/Loveland area, and Greeley, along with their surrounding communities.<br><br>
+        In the Denver Metro, we serve homeowners in Denver, Aurora, Lakewood, Thornton, Arvada, Westminster, Centennial, Highlands Ranch, Englewood, Littleton, Wheat Ridge, Northglenn, Commerce City, Brighton, Broomfield, Lafayette, Louisville, Erie, Parker, Castle Rock, Greenwood Village, Cherry Hills Village, Federal Heights, Sheridan, Glendale, Golden, Morrison, Edgewater, and surrounding areas.<br><br>
+        Across the Colorado Springs Metro, we buy homes in Colorado Springs, Fountain, Security-Widefield, Cimarron Hills, Fort Carson, Monument, Palmer Lake, Falcon, Peyton, Black Forest, Manitou Springs, and nearby communities.<br><br>
+        In the Fort Collins and Northern Colorado region, we work with sellers in Fort Collins, Loveland, Windsor, Timnath, Wellington, Berthoud, Johnstown, and surrounding towns.<br><br>
+        We also actively buy in Greeley and nearby areas including Evans, LaSalle, Garden City, Milliken, Platteville, and Kersey.<br><br>
+        If your property is anywhere along the Front Range — even if your city isn't listed — we're likely already buying in your neighborhood. Whether you're dealing with a distressed property, preforeclosure, probate, or just need to sell quickly, we can make a fair cash offer and close on your timeline.
+      </div>
+    </div>
+  </div>
+  <div class="faq-footer">
+    <p>Still have questions? We're here to help.</p>
+    <button class="btn-gold" style="padding:14px 28px;" onclick="openOfferForm()">Get My Cash Offer</button>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Ready to Get Your Cash Offer?</h2>
+  <p>It takes 60 seconds. No repairs. No fees. No obligation.</p>
+  <div class="cta-form">
+    <input id="ctaAddress" type="text" placeholder="Enter your property address">
+    <button class="btn-gold" onclick="openOfferFormFromCta()">Get My Cash Offer →</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo"><img src="GoldRock_Logo_Flat.jpeg" alt="GoldRock" style="height:36px;width:auto;border-radius:4px;"></div>
+      <p class="footer-tagline">Helping Colorado homeowners sell fast, fair, and hassle-free.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Pages</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Agents</h4>
+      <ul>
+        <li><a href="agents.html">Partner With Us</a></li>
+        <li><a href="agents.html#agentForm">Submit a Referral</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="about.html">Tyler</a></li>
+        <li><a href="about.html">Riley</a></li>
+        <li><a href="about.html#contact">Send Us a Message</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 GoldRock. All rights reserved.</span>
+    <div class="footer-bottom-links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Step scroll animations
+  const stepObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        const steps = document.querySelectorAll('.step');
+        const index = Array.from(steps).indexOf(entry.target);
+        setTimeout(() => {
+          entry.target.classList.add('step-visible');
+        }, index * 150);
+        stepObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.step').forEach(step => stepObserver.observe(step));
+
+  // Hamburger menu
+  function toggleMobileNav() {
+    const nav = document.getElementById('mobileNav');
+    nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+  }
+  function closeMobileNav() {
+    document.getElementById('mobileNav').style.display = 'none';
+  }
+
+  // Hero form focus styles
+  document.querySelectorAll('input, textarea').forEach(el => {
+    el.addEventListener('focus', () => el.style.borderColor = 'var(--gold)');
+    el.addEventListener('blur', () => el.style.borderColor = 'var(--border)');
+  });
+
+  // Hero form submission
+  function submitHeroForm() {
+    const firstName = document.getElementById('firstName').value.trim();
+    const lastName = document.getElementById('lastName').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const address = document.getElementById('address').value.trim();
+    const notes = document.getElementById('notes').value.trim();
+
+    if (!firstName || !lastName || !email || !phone || !address) {
+      alert('Please fill out all required fields before submitting.');
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+
+    // Show success message
+    document.getElementById('heroFormSuccess').style.display = 'block';
+    document.getElementById('firstName').value = '';
+    document.getElementById('lastName').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('address').value = '';
+    document.getElementById('notes').value = '';
+
+    console.log('Form submitted:', { firstName, lastName, email, phone, address, notes });
+  }
+
+  // CTA form submission
+  function submitCtaForm() {
+    const address = document.getElementById('ctaAddress').value.trim();
+    if (!address) {
+      alert('Please enter your property address.');
+      return;
+    }
+    document.getElementById('ctaSuccess').style.display = 'block';
+    document.getElementById('ctaAddress').value = '';
+  }
+  document.querySelectorAll('.faq-question').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  // Scroll-triggered number counter animation
+  const statEls = document.querySelectorAll('.stat-val[data-target]');
+  const animatedStats = new Set();
+
+  function animateCounter(el) {
+    const target = parseInt(el.getAttribute('data-target'));
+    const suffix = el.getAttribute('data-suffix') || '';
+    const prefix = el.getAttribute('data-prefix') || '';
+    const duration = 2000;
+    const steps = 60;
+    const stepTime = duration / steps;
+    let current = 0;
+    const increment = target / steps;
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= target) {
+        current = target;
+        clearInterval(timer);
+      }
+      el.textContent = prefix + Math.floor(current) + suffix;
+    }, stepTime);
+  }
+
+  function checkStats() {
+    statEls.forEach(el => {
+      if (animatedStats.has(el)) return;
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.85) {
+        animatedStats.add(el);
+        animateCounter(el);
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkStats, { passive: true });
+  checkStats();
+  const videoThumb = document.getElementById('videoThumb');
+  const minScale = 0.72;
+  const maxScale = 1.0;
+
+  function updateVideoScale() {
+    const rect = videoThumb.getBoundingClientRect();
+    const windowH = window.innerHeight;
+    const centerY = rect.top + rect.height / 2;
+    const progress = 1 - Math.max(0, Math.min(1, (centerY - windowH * 0.3) / (windowH * 0.7)));
+    const scale = minScale + (maxScale - minScale) * progress;
+    videoThumb.style.transform = `scale(${scale})`;
+    if (scale > 0.95) {
+      videoThumb.classList.add('popped');
+    } else {
+      videoThumb.classList.remove('popped');
+    }
+  }
+
+  window.addEventListener('scroll', updateVideoScale, { passive: true });
+  updateVideoScale();
+</script>
+<!-- OFFER FORM MODAL -->
+<div id="offerModal" style="display:none; position:fixed; inset:0; z-index:9999; background:rgba(0,0,0,0.6); backdrop-filter:blur(4px); align-items:center; justify-content:center; padding:20px;">
+  <div id="offerModalInner" style="background:white; border-radius:20px; max-width:540px; width:100%; max-height:90vh; overflow-y:auto; padding:40px; position:relative; transform:scale(0.92); opacity:0; transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1), opacity 0.25s ease; box-shadow:0 24px 80px rgba(0,0,0,0.25);">
+
+    <!-- Close button -->
+    <button onclick="closeOfferForm()" style="position:absolute; top:16px; right:16px; background:none; border:none; cursor:pointer; font-size:22px; color:var(--text-muted); line-height:1; width:32px; height:32px; display:flex; align-items:center; justify-content:center; border-radius:50%; transition:background 0.2s;" onmouseover="this.style.background='#f0ece4'" onmouseout="this.style.background='none'">✕</button>
+
+    <!-- Header -->
+    <div style="text-align:center; margin-bottom:28px;">
+      <p style="font-size:12px; font-weight:700; letter-spacing:2px; color:var(--gold); margin-bottom:8px;">GET YOUR CASH OFFER</p>
+      <h2 style="font-size:26px; font-weight:800; color:var(--text); margin:0; letter-spacing:-0.5px;">Tell Us About Your Property</h2>
+      <p style="color:var(--text-muted); font-size:14px; margin-top:8px;">Click it. Fill it. It takes less time than taking a sh*t.</p>
+    </div>
+
+    <!-- Form -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:14px;">
+      <div>
+        <label style="display:block; font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:6px; letter-spacing:1px;">FIRST NAME *</label>
+        <input id="mFirstName" type="text" placeholder="First" style="width:100%; padding:12px 14px; border:1.5px solid var(--border); border-radius:8px; font-family:'DM Sans',sans-serif; font-size:14px; color:var(--text); outline:none; box-sizing:border-box; transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'">
+      </div>
+      <div>
+        <label style="display:block; font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:6px; letter-spacing:1px;">LAST NAME *</label>
+        <input id="mLastName" type="text" placeholder="Last" style="width:100%; padding:12px 14px; border:1.5px solid var(--border); border-radius:8px; font-family:'DM Sans',sans-serif; font-size:14px; color:var(--text); outline:none; box-sizing:border-box; transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'">
+      </div>
+    </div>
+    <div style="margin-bottom:14px;">
+      <label style="display:block; font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:6px; letter-spacing:1px;">EMAIL ADDRESS *</label>
+      <input id="mEmail" type="email" placeholder="yourname@email.com" style="width:100%; padding:12px 14px; border:1.5px solid var(--border); border-radius:8px; font-family:'DM Sans',sans-serif; font-size:14px; color:var(--text); outline:none; box-sizing:border-box; transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'">
+    </div>
+    <div style="margin-bottom:14px;">
+      <label style="display:block; font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:6px; letter-spacing:1px;">PHONE NUMBER *</label>
+      <input id="mPhone" type="tel" placeholder="(303) 555-0187" style="width:100%; padding:12px 14px; border:1.5px solid var(--border); border-radius:8px; font-family:'DM Sans',sans-serif; font-size:14px; color:var(--text); outline:none; box-sizing:border-box; transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'">
+    </div>
+    <div style="margin-bottom:14px;">
+      <label style="display:block; font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:6px; letter-spacing:1px;">PROPERTY ADDRESS *</label>
+      <input id="mAddress" type="text" placeholder="1234 Blake St, Denver, CO 80202" style="width:100%; padding:12px 14px; border:1.5px solid var(--border); border-radius:8px; font-family:'DM Sans',sans-serif; font-size:14px; color:var(--text); outline:none; box-sizing:border-box; transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'">
+    </div>
+    <div style="margin-bottom:24px;">
+      <label style="display:block; font-size:11px; font-weight:700; color:var(--text-muted); margin-bottom:6px; letter-spacing:1px;">TELL US ABOUT YOUR SITUATION</label>
+      <textarea id="mNotes" placeholder="What's going on? Anything we should know about the property or your timeline..." rows="3" style="width:100%; padding:12px 14px; border:1.5px solid var(--border); border-radius:8px; font-family:'DM Sans',sans-serif; font-size:14px; color:var(--text); outline:none; resize:vertical; box-sizing:border-box; transition:border-color 0.2s;" onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor='var(--border)'"></textarea>
+    </div>
+
+    <button onclick="submitOfferForm()" class="btn-gold" style="width:100%; padding:16px; font-size:16px; justify-content:center; border-radius:10px;">Submit — I'm Ready To Get Paid →</button>
+
+    <!-- Success state -->
+    <div id="modalSuccess" style="display:none; margin-top:16px; background:#f0fdf4; border:1.5px solid #2d7a3a; border-radius:10px; padding:20px; text-align:center;">
+      <p style="font-size:22px; margin-bottom:8px;">✓</p>
+      <p style="font-weight:700; color:#2d7a3a; font-size:16px; margin-bottom:4px;">You're all set!</p>
+      <p style="color:#2d7a3a; font-size:14px;">Tyler or Riley will reach out shortly. Keep your phone close.</p>
+    </div>
+
+    <p style="font-size:12px; color:var(--text-muted); text-align:center; margin-top:14px;">🔒 Your info is private. We never sell or share your data.</p>
+  </div>
+</div>
+
+<script>
+  function openOfferForm() {
+    const modal = document.getElementById('offerModal');
+    const inner = document.getElementById('offerModalInner');
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => {
+      inner.style.transform = 'scale(1)';
+      inner.style.opacity = '1';
+    }, 10);
+  }
+
+  function openOfferFormFromCta() {
+    const ctaVal = document.getElementById('ctaAddress').value.trim();
+    openOfferForm();
+    if (ctaVal) {
+      setTimeout(() => {
+        const modalAddress = document.getElementById('mAddress');
+        if (modalAddress) modalAddress.value = ctaVal;
+      }, 50);
+    }
+  }
+
+  function closeOfferForm() {
+    const modal = document.getElementById('offerModal');
+    const inner = document.getElementById('offerModalInner');
+    inner.style.transform = 'scale(0.92)';
+    inner.style.opacity = '0';
+    setTimeout(() => {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+      document.getElementById('modalSuccess').style.display = 'none';
+    }, 280);
+  }
+
+  // Close on backdrop click
+  document.getElementById('offerModal').addEventListener('click', function(e) {
+    if (e.target === this) closeOfferForm();
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeOfferForm();
+  });
+
+  function submitOfferForm() {
+    const firstName = document.getElementById('mFirstName').value.trim();
+    const lastName = document.getElementById('mLastName').value.trim();
+    const email = document.getElementById('mEmail').value.trim();
+    const phone = document.getElementById('mPhone').value.trim();
+    const address = document.getElementById('mAddress').value.trim();
+    const notes = document.getElementById('mNotes').value.trim();
+
+    if (!firstName || !lastName || !email || !phone || !address) {
+      alert('Please fill out all required fields before submitting.');
+      return;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+
+    fetch('https://hooks.zapier.com/hooks/catch/27032074/un7f9hz/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({ firstName, lastName, email, phone, address, notes })
+    }).catch(err => console.error('Zapier error:', err));
+
+    document.getElementById('modalSuccess').style.display = 'block';
+    document.getElementById('mFirstName').value = '';
+    document.getElementById('mLastName').value = '';
+    document.getElementById('mEmail').value = '';
+    document.getElementById('mPhone').value = '';
+    document.getElementById('mAddress').value = '';
+    document.getElementById('mNotes').value = '';
+  }
+</script>
+</body>
+</html>
