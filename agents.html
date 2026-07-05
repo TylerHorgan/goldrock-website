@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/jpeg" href="GoldRock_Logo_Flat.jpeg">
-<title>GoldRock — Agent Referral Program</title>
+<title>GoldRock — Agent Partnership Program</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -153,6 +153,94 @@
     padding: 80px 48px;
     text-align: center;
   }
+  /* COMPARISON CHART */
+  .compare-section {
+    background: var(--white);
+    padding: 80px 48px;
+    text-align: center;
+  }
+  .compare-section h2 {
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+  .compare-section .subtitle {
+    color: var(--text-muted);
+    font-size: 16px;
+    max-width: 620px;
+    margin: 0 auto 56px;
+  }
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    max-width: 980px;
+    margin: 0 auto;
+    text-align: left;
+    align-items: stretch;
+  }
+  .compare-col {
+    border-radius: 16px;
+    padding: 36px 32px;
+    transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease;
+  }
+  .compare-col:hover { transform: translateY(-6px); }
+  .compare-col.bad {
+    background: #141414;
+    border: 1px solid #2a2a2a;
+  }
+  .compare-col.bad:hover { box-shadow: 0 20px 48px rgba(0,0,0,0.25); }
+  .compare-col.good {
+    background: white;
+    border: 2px solid var(--gold);
+    box-shadow: 0 8px 40px rgba(212,168,50,0.12);
+  }
+  .compare-col.good:hover { box-shadow: 0 20px 48px rgba(212,168,50,0.22); }
+  .compare-col-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .compare-col.bad .compare-col-label { color: #c0392b; }
+  .compare-col.good .compare-col-label { color: var(--gold); }
+  .compare-col-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 24px;
+  }
+  .compare-col.bad .compare-col-title { color: white; }
+  .compare-col.good .compare-col-title { color: var(--text); }
+  .compare-col ul { list-style: none; }
+  .compare-col li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 12px 0;
+    font-size: 14.5px;
+    line-height: 1.6;
+  }
+  .compare-col.bad li { color: #b5b5b5; border-bottom: 1px solid #222; }
+  .compare-col.good li { color: var(--text); border-bottom: 1px solid var(--border); }
+  .compare-col li:last-child { border-bottom: none; }
+  .compare-mark {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 800;
+    margin-top: 2px;
+  }
+  .compare-col.bad .compare-mark { background: rgba(192,57,43,0.18); color: #e74c3c; }
+  .compare-col.good .compare-mark { background: rgba(212,168,50,0.16); color: var(--gold-dark); }
   .why-section h2 {
     font-size: clamp(28px, 4vw, 48px);
     font-weight: 800;
@@ -557,6 +645,13 @@
     .why-card h3 { font-size: 17px; }
     .why-card p { font-size: 14px; }
 
+    /* COMPARISON CHART */
+    .compare-section { padding: 56px 20px; }
+    .compare-section h2 { font-size: clamp(26px, 7vw, 40px); }
+    .compare-grid { grid-template-columns: 1fr; }
+    .compare-col { padding: 28px 22px; }
+    .compare-col:hover { transform: none; }
+
     /* AGENT PROGRAM DARK SECTION */
     section[style*="near-black"] { padding: 56px 20px !important; }
     div[style*="display:flex; gap:16px; justify-content:center"] {
@@ -650,13 +745,13 @@
 <!-- HERO -->
 <section class="agent-hero">
   <p class="section-label" style="color:var(--gold);">FOR REAL ESTATE AGENTS</p>
-  <h1>We Don't Compete<br>With Agents.<br><span>We Work With Them.</span></h1>
-  <p>Got a deal that's about to die? A seller who needs cash now? That's exactly what we're built for. Send it. We'll handle it — and you look like the hero.</p>
+  <h1>Get Paid on the<br><span>Leads You Can't List.</span></h1>
+  <p>The seller who needs out in two weeks. The house no retail buyer will touch. The deal that's about to die. That's exactly what we buy — and your commission survives the deal.</p>
   <div class="hero-badges" id="heroBadges">
-    <span class="hero-badge-item">✓ We Have an Agent Partner Program</span>
-    <span class="hero-badge-item">✓ Close in as Little as 7 to 14 Days</span>
+    <span class="hero-badge-item">✓ We Walk Every Property — No Sight-Unseen Offers</span>
+    <span class="hero-badge-item">✓ Close in as Little as 14 Days</span>
     <span class="hero-badge-item">✓ Colorado Real Estate Commission Approved Contracts</span>
-    <span class="hero-badge-item">✓ Real Cash. Real Buyers.</span>
+    <span class="hero-badge-item">✓ Your Commission, Protected on Every Deal</span>
   </div>
   <button class="btn-gold glow-pulse" style="padding:18px 40px; font-size:17px;" onclick="document.getElementById('agentForm').scrollIntoView({behavior:'smooth'})">Partner With GoldRock →</button>
 </section>
@@ -664,29 +759,62 @@
 <!-- AGENT PROGRAM -->
 <section style="background:var(--near-black); padding:80px 48px; text-align:center;">
   <div style="max-width:700px; margin:0 auto;">
-    <p class="section-label" style="color:var(--gold);">THE GOLDROCK AGENT PROGRAM</p>
+    <p class="section-label" style="color:var(--gold);">THE GOLDROCK AGENT PARTNERSHIP</p>
     <h2 style="font-size:clamp(28px,4vw,44px); font-weight:800; letter-spacing:-1px; color:white; margin-bottom:20px;">Built for Agents Who Want a Real Partner.</h2>
-    <p style="color:#aaa; font-size:16px; line-height:1.8; margin-bottom:16px;">We've built a dedicated agent program because we believe the best deals happen when everyone's on the same team. As a GoldRock agent partner, you get a direct line to Tyler and Riley, priority response on referrals, and a structured referral fee program that rewards you for the deals you send our way.</p>
+    <p style="color:#aaa; font-size:16px; line-height:1.8; margin-bottom:16px;">We built this program for agents who keep hitting the same wall: a motivated seller, a property that can't go on the MLS, and no clean way to get paid. As a GoldRock partner agent, your commission is protected on every deal — your number is set before your seller ever hears our name, we never negotiate against it, and it's paid by the title company at closing, right on the settlement statement.</p>
     <p style="color:#aaa; font-size:16px; line-height:1.8; margin-bottom:40px;">Think of us as the cash buyer in your back pocket — the one you call when a deal is about to die, when a seller needs out fast, or when a property is too distressed for any traditional buyer to touch. <strong style="color:white;">We turn your hardest deals into closed deals.</strong> And we make sure you look like a genius for knowing who to call.</p>
     <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:40px;">
       <div class="trace-box" id="traceBox1">
         <span class="trace-b"></span><span class="trace-l"></span>
-        <p style="color:var(--gold); font-size:12px; font-weight:700; letter-spacing:1px; margin-bottom:8px;">PRIORITY ACCESS</p>
-        <p style="color:white; font-size:14px; line-height:1.6;">Direct line to Tyler & Riley on every referral</p>
+        <p style="color:var(--gold); font-size:12px; font-weight:700; letter-spacing:1px; margin-bottom:8px;">COMMISSION PROTECTED</p>
+        <p style="color:white; font-size:14px; line-height:1.6;">Your number is set before your seller hears our name — paid by title at closing</p>
       </div>
       <div class="trace-box" id="traceBox2">
         <span class="trace-b"></span><span class="trace-l"></span>
-        <p style="color:var(--gold); font-size:12px; font-weight:700; letter-spacing:1px; margin-bottom:8px;">AGENT PROGRAM</p>
-        <p style="color:white; font-size:14px; line-height:1.6;">A structured program that rewards agents who trust us with their clients</p>
+        <p style="color:var(--gold); font-size:12px; font-weight:700; letter-spacing:1px; margin-bottom:8px;">WALKTHROUGH FIRST</p>
+        <p style="color:white; font-size:14px; line-height:1.6;">We never make sight-unseen offers — we walk the property so the number is real</p>
       </div>
       <div class="trace-box" id="traceBox3">
         <span class="trace-b"></span><span class="trace-l"></span>
         <p style="color:var(--gold); font-size:12px; font-weight:700; letter-spacing:1px; margin-bottom:8px;">FAST RESPONSE</p>
-        <p style="color:white; font-size:14px; line-height:1.6;">We get back to you before your next showing</p>
+        <p style="color:white; font-size:14px; line-height:1.6;">Direct line to Tyler & Riley — offers on your seller's timeline</p>
       </div>
     </div>
-    <p style="color:#888; font-size:15px; margin-bottom:24px;">Interested in learning more about the GoldRock Agent Program? Fill out the form below and Tyler or Riley will walk you through everything.</p>
-    <button class="btn-gold glow-pulse" style="padding:16px 36px; font-size:16px;" onclick="document.getElementById('agentForm').scrollIntoView({behavior:'smooth'})">Inquire About the Agent Program →</button>
+    <p style="color:#888; font-size:15px; margin-bottom:24px;">Interested in learning more about the Agent Partnership Program? Fill out the form below and Tyler or Riley will walk you through everything.</p>
+    <button class="btn-gold glow-pulse" style="padding:16px 36px; font-size:16px;" onclick="document.getElementById('agentForm').scrollIntoView({behavior:'smooth'})">Inquire About the Partnership Program →</button>
+  </div>
+</section>
+
+<!-- COMPARISON CHART -->
+<section class="compare-section">
+  <p class="section-label">KNOW WHO YOU'RE SENDING YOUR SELLER TO</p>
+  <h2>Not All "Cash Buyers" Are Buyers</h2>
+  <p class="subtitle">You've seen it happen: an investor locks up your seller, then ghosts, grinds, or vanishes at the closing table. Here's how to tell the difference — by conduct, not promises.</p>
+  <div class="compare-grid">
+    <div class="compare-col bad why-scroll">
+      <p class="compare-col-label">The Typical "Cash Buyer"</p>
+      <p class="compare-col-title">What Burns Agents</p>
+      <ul>
+        <li><span class="compare-mark">✗</span>Makes sight-unseen offers generated by a formula — the number was never real</li>
+        <li><span class="compare-mark">✗</span>Re-trades the price a week before closing, once your seller is out of options</li>
+        <li><span class="compare-mark">✗</span>Hides behind refundable earnest money — nothing at risk if they walk</li>
+        <li><span class="compare-mark">✗</span>Uses endless inspection objections to grind your seller down</li>
+        <li><span class="compare-mark">✗</span>Assigns your seller's contract to a stranger you've never met</li>
+        <li><span class="compare-mark">✗</span>Ghosts you the moment a better deal shows up — and nobody answers when it goes sideways</li>
+      </ul>
+    </div>
+    <div class="compare-col good why-scroll">
+      <p class="compare-col-label">The GoldRock Standard</p>
+      <p class="compare-col-title">How We Operate</p>
+      <ul>
+        <li><span class="compare-mark">✓</span>Every offer follows an in-person walkthrough — we never make sight-unseen offers, so the number is real</li>
+        <li><span class="compare-mark">✓</span>Non-refundable earnest money — we have skin in the game from day one</li>
+        <li><span class="compare-mark">✓</span>No inspection contingency on our standard offer</li>
+        <li><span class="compare-mark">✓</span>CREC approved contracts — the same ones you use every day</li>
+        <li><span class="compare-mark">✓</span>Your commission is set before your seller ever hears our name — we never negotiate against it</li>
+        <li><span class="compare-mark">✓</span>Founder-led — Tyler answers his own phone. Proof of funds and title references on request</li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -698,8 +826,8 @@
   <div class="why-grid">
     <div class="why-card why-scroll">
       <span class="why-icon">💰</span>
-      <h3>We Have an Agent Partner Program</h3>
-      <p>A structured program for agents who want a real cash buyer in their corner. Send us your tough deals and your distressed listings — and we take care of you. Inquire below to learn more.</p>
+      <h3>Your Commission Survives the Deal</h3>
+      <p>Your number is set before your seller ever hears our name — and we never negotiate against it. Paid by the title company at closing, on the settlement statement, like every other deal you do.</p>
     </div>
     <div class="why-card why-scroll">
       <span class="why-icon">📋</span>
@@ -742,17 +870,17 @@
     <div class="how-step how-scroll">
       <div class="how-num">2</div>
       <h3>We Connect Fast</h3>
-      <p>Tyler or Riley gets back to you within hours — not days. We figure out how to work together and what deals make sense.</p>
+      <p>Tyler or Riley gets back to you fast — and offers move on your seller's timeline, not ours.</p>
     </div>
     <div class="how-step how-scroll">
       <div class="how-num">3</div>
-      <h3>You Bring the Deal</h3>
-      <p>Got a distressed listing or a seller who needs out fast? Bring it to us. We walk the property together and get to work.</p>
+      <h3>We Walk It Together</h3>
+      <p>We never make sight-unseen offers. You bring the deal, we walk the property together — so the number your seller hears is real, not a formula.</p>
     </div>
     <div class="how-step how-scroll">
       <div class="how-num">4</div>
-      <h3>Everyone Wins</h3>
-      <p>We close. Your seller gets cash. You look like the person who made the impossible happen. That's the partnership.</p>
+      <h3>You Get Paid at Closing</h3>
+      <p>We close on your seller's timeline. Your commission is paid by the title company at closing — on the settlement statement. Everyone wins, and you look like the person who made the impossible happen.</p>
     </div>
   </div>
 </section>
@@ -791,7 +919,7 @@
   <div class="form-inner">
     <p class="section-label">LET'S WORK TOGETHER</p>
     <h2>Partner With GoldRock</h2>
-    <p class="subtitle">Got a seller? Got a listing that needs a cash buyer? Fill this out and Tyler or Riley will be in touch fast. We keep it simple.</p>
+    <p class="subtitle">Got a seller? Got a listing that needs a cash buyer? Fill this out and Tyler or Riley will be in touch fast.<br>Or skip the form and text Tyler directly: <a href="tel:+17209551332" style="color:var(--gold-dark); font-weight:700; text-decoration:none;">720-955-1332</a></p>
 
     <div class="form-card">
       <div class="form-row">
@@ -839,7 +967,7 @@
 <footer>
   <div class="footer-grid">
     <div>
-      <div class="footer-logo"><img src="GoldRock_Logo_Flat.jpeg" alt="GoldRock" style="height:36px;width:auto;border-radius:4px;"></div>
+      <div class="footer-logo"><img src="goldrock-gold_transparent_logo.png" alt="GoldRock" style="height:44px;width:auto;"></div>
       <p class="footer-tagline">Helping Colorado homeowners sell fast, fair, and hassle-free.</p>
     </div>
     <div class="footer-col">
@@ -854,13 +982,13 @@
       <h4>Agents</h4>
       <ul>
         <li><a href="agents.html">Partner With Us</a></li>
-        <li><a href="agents.html#agentForm">Submit a Referral</a></li>
+        <li><a href="agents.html#agentForm">Send Us a Deal</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Contact</h4>
       <ul>
-        <li><a href="about.html">Tyler</a></li>
+        <li><a href="tel:+17209551332">Tyler — (720) 955-1332</a></li>
         <li><a href="about.html">Riley</a></li>
         <li><a href="about.html#contact">Send Us a Message</a></li>
         <li><a href="faq.html">FAQ</a></li>
